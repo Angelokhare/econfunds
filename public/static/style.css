@@ -297,8 +297,8 @@ font-family: 'Caveat', cursive; }  */
 #rr{
   padding-top: 2%;
   border-radius: 50px;
-  /* padding-left: 10%; */
-  /* padding-right: 10%; */
+  padding-left: 10%;
+  padding-right: 10%;
   padding-bottom: 2%;
 }
 .link-line:hover{
@@ -410,6 +410,19 @@ color: #5FD068;}
       
   }
 
+  @supports (-webkit-touch-callout: none) {
+    #mydancing {
+        background: url('build.jpg') center top no-repeat scroll;
+        background-size: auto 100vh;
+    }    
+    }
+  
+  @supports (-webkit-touch-callout: none) {
+      #dapping {
+          background: url('moneylong.jpg') center top no-repeat scroll;
+          background-size: auto 100vh;
+      }    
+      } 
     #myVideo{display: none;} }
 
 
@@ -436,6 +449,7 @@ color: #5FD068;}
   padding-right: 40%;
   padding-top: 5%;
   padding-bottom: 5%;
+  font-size: 3vw;
 }
 .please-enter {
 font-size: 3vw;}
@@ -478,3 +492,5 @@ font-size: 3vw;}
     background-size: 120%;
   }
 }
+
+ 
