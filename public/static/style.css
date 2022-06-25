@@ -500,6 +500,11 @@ font-size: 3vw;}
  
 @media only screen and (max-width:450px){
   .navbar .nav_right ul li .omg{
-    width: 15px;
+    width: 20px;
   }
+}
+
+@media only screen and (max-width:400px){
+  .welcoming {
+  font-size: 450%;}
 }
