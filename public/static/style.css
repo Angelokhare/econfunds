@@ -176,7 +176,7 @@ vertical-align: middle;
   background-image: url('look-up.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 120%;
+  /* background-size: 120%; */
 }
 header {
     display: flex;
@@ -227,7 +227,7 @@ header {
   background-image: url('money.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
+  /* background-size: 100%; */
 }
 .secname {
   color: green;}
@@ -405,13 +405,13 @@ color: #5FD068;}
       background-image: url('build.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-size: 100%;}
+      /* background-size: 100%;} */ }
    #dapping{
         background-image: url('moneylong.jpg');
         /* background-repeat: no-repeat;
         background-attachment: fixed;*/
-        background-size: 100%;
-      
+        /* background-size: 100%; */
+   }      
   }
 
   @supports (-webkit-touch-callout: none) {
@@ -493,7 +493,7 @@ font-size: 3vw;}
 
 @media only screen and (max-width:900px){
   #dapping{
-    background-size: 120%;
+    /* background-size: 120%; */
   }
 }
 
