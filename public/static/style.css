@@ -408,13 +408,13 @@ color: #5FD068;}
       /* background-size: 100%;} */ }
    #dapping{
         background-image: url('moneylong.jpg');
-        /* background-repeat: no-repeat;
-        background-attachment: fixed;*/
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         /* background-size: 100%; */
    }      
   }
 
-  @supports (-webkit-touch-callout: none) {
+  /* @supports (-webkit-touch-callout: none) {
     #mydancing {
         background: url('build.jpg') center top no-repeat scroll;
         background-size: auto 100vh;
@@ -426,8 +426,8 @@ color: #5FD068;}
           background: url('moneylong.jpg') center top no-repeat scroll;
           background-size: auto 100vh;
       }    
-      } 
-    #myVideo{display: none;} }
+      }  */
+    /* #myVideo{display: none;} } */
 
 
 @media only screen and (max-width:980px) {
