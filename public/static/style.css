@@ -116,7 +116,7 @@ vertical-align: middle;
 /* offfffffff */
 .ve{
   display: inline-block;
-  padding: 0px 4%;
+  padding: 2px 25px;
 }
 .welcoming {
   animation-duration: 3s;
@@ -126,7 +126,8 @@ vertical-align: middle;
   font-size: 650%;
   /* font-size: 10vw; */
   /* color: #76BA99; */
-  color: #293462;
+  /* color: #293462; */
+  color: #3A5BA0;
   /* font-family: 'Varela Round', sans-serif; */
   z-index: 2;
 }
@@ -280,6 +281,7 @@ font-family: 'Caveat', cursive; }  */
 }
 .social{
   margin-top: 5%;
+  margin-right: 8%;
   list-style: none;
 }
 .heading{
@@ -506,7 +508,8 @@ font-size: 3vw;}
 
 @media only screen and (max-width:400px){
   .welcoming {
-  font-size: 450%;}
+  font-size: 450%;
+padding-top: 15%;}
 }
 @media only screen and (min-height:800px){
   #mydancing{
