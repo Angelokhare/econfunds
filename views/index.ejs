@@ -42,9 +42,9 @@
           </div>
           <div class="nav_right">
            <ul>
-             <li class="nr_li">
+             <!-- <li class="nr_li">
                <i>hjhjhh</i>
-             </li>
+             </li> -->
              <li class="nr_li li_main">
                <img  class="omg" src="static/menu.png" alt="">
        
@@ -118,8 +118,9 @@
            </footer>
     <!-- </div> -->
          <script>
+      
            var li_main=document.querySelector(".li_main");
-       
+    
            li_main.addEventListener("click", function(){
              this.classList.toggle("active");
            })
@@ -127,10 +128,18 @@
            var cod= document.querySelector(".omg");
 
            cod.addEventListener("click", function(){
+            if(window.navigator.onLine==true){
             if(cod.getAttribute("src")== "static/menu.png"){
               cod.setAttribute("src", "static/cancel.png")}
             else{
               cod.setAttribute("src", "static/menu.png")}
+            }
+          else{
+            if(cod.getAttribute("src")== "static/cancel.png"){
+              cod.setAttribute("src", "static/menu.png")}
+            else{
+              cod.setAttribute("src", "static/menu.png")}
+            }
             })
          </script>
 
