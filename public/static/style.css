@@ -280,8 +280,8 @@ font-family: 'Caveat', cursive; }  */
   display: block;
 }
 .social{
-  margin-top: 5%;
-  margin-right: 8%;
+  margin-top: 3%;
+  margin-right: 3%;
   list-style: none;
 }
 .heading{
@@ -446,6 +446,11 @@ color: #5FD068;}
       display: block;
       /* position: fixed;*/
     }
+    .social{
+      margin-top: 5%;
+      margin-right: 8%;
+      /* list-style: none; */
+    }
   .down-below{
     margin-top: 5%;
     margin-bottom: 15%;
@@ -526,6 +531,7 @@ background-size: 210%;
    position: fixed;
    bottom: 0%;
   }
+
 }
 @media only screen and (max-width:367px){
   .navbar .nav_right ul li .omg{
