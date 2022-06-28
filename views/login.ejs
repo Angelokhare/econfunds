@@ -27,8 +27,12 @@
       <nav>
         <ul class="docking">
          
-          <li><a class=" over link-line" id="ff" href="/">Back</a></li>
-          <li><button class="btn btn-dark" id="ff" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li>
+          <li><a class="decoration tic"  >About</a></li>
+          <li><a class="decoration tic"  href="">Features</a></li>
+          <!-- <li><a class="decoration tic"  href="">Blog</a></li> -->
+          <li><a class="decoration tic"  href="">FAQ</a></li>
+          <li><a class=" tic sr"  href="/">Home</a></li>
+          <li><button class="btn tap" id="ff" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li>
           
         </ul>
       </nav>
@@ -60,7 +64,7 @@
                  </div>
                  <div class="dd_right">
                    <ul>
-                     <li><a class="init" href="/"> Back</a></li>
+                     <li><a class="init" href="/"> Home</a></li>
                      <li><a class="init" href="/signup"> Signup</a></li>
                    </ul>
        
@@ -104,7 +108,7 @@
             <!-- <i class="cover">{{note}}</i> -->
             <form class="" action="" method="POST">
               <input class="edges" type="text" name="username" placeholder="username or email" value="" required><br>
-              <input class="edges" type="password" name="password" placeholder="enter password" value="" required><br>
+              <input class="edges kl" type="password" name="password" placeholder="enter password" value="" required> <img class="secure" style="width:20px" src="static/visibility.png" alt=""><br>
               <button type="submit" id="ff" class="btn log">Login</button>
             </form>
             <h3 class=please-enter id=below-button>Are you new to Econfunds, <a class="decoration" href="/signup">Sign up</a> here!</h3>
@@ -147,13 +151,40 @@
             else{
               cod.setAttribute("src", "static/menu.png")}
             }
+          })
+            var zod= document.querySelector(".secure");
+            var hand= document.querySelector(".kl")
+
+           zod.addEventListener("click", function(){
+            if(window.navigator.onLine==true){
+            if(zod.getAttribute("src")== "static/visibility.png"){
+              zod.setAttribute("src", "static/eye.png")
+              hand.setAttribute("type", "text");
+            
+            }
+            else{
+              zod.setAttribute("src", "static/visibility.png")
+              hand.setAttribute("type", "password");}
+          }})
+          // var zod= document.querySelector(".secure");
+          //   var hand= document.querySelector(".kl")
+
+          //  zod.addEventListener("click", function(){
+          // if (hand.getAttribute("type")== "password"){
+          //     hand.setAttribute("type", "text") }
+
+          //  else{
+          //   hand.setAttribute("type", "password")
+          //  }   
+          // })
+
           // else{
           //   if(cod.getAttribute("src")== "static/cancel.png"){
           //     cod.setAttribute("src", "static/menu.png")}
           //   else{
           //     cod.setAttribute("src", "static/menu.png")}
           // }
-        })
+
           //  li_main.addEventListener("click", function(){
           //    this.classList.toggle("active");
           //  })

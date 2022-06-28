@@ -169,6 +169,12 @@ vertical-align: middle;
   font-family: 'Merienda', cursive;
 
 }
+#coming{
+  background-color: #F7F5F2;
+}
+.kl{
+  margin-left: 25px;
+}
 .corny{
   color: #9EB23B;
 }
@@ -183,9 +189,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 7%;
+    padding: 0px 1%;
     /* position: fixed; */
-    background-color: #5F7161;
+    /* background-color: #5F7161; */
     /* background-color: rgba(0,0,0, 0.4) */
   }
 
@@ -299,7 +305,23 @@ font-family: 'Caveat', cursive; }  */
 .docking {
     list-style: none;
   } 
-  
+  .tic{
+    font-weight: 700;
+    color: #5F7161;
+    text-decoration: none;
+  }
+  /* .sr{
+    border-left: 5px solid #7D9D9C;
+    padding-left: 5px;
+    height: 14px;
+  } */
+.tic:hover{
+  color: #19282F;
+  border-bottom: 3px solid #7D9D9C;}
+
+  .tap{
+    background-color: #5FD068;
+  }
 #rr{
   padding-top: 2%;
   border-radius: 50px;
@@ -317,7 +339,7 @@ color: white;
 }
 .docking li {
     display: inline-block;
-    padding: 0px 40px;
+    padding: 0px 30px;
   }
 .link-line {text-decoration: none;
   font-family: 'Varela Round', sans-serif;
@@ -397,6 +419,15 @@ color: #5FD068;}
       width: 125%;
       opacity: 90%;
       z-index: -1;} } 
+
+      @media only screen and (max-width:1009px) {
+        /* #view{visibility: visible;} */
+        header {display: none;}
+      #view{
+        display: block;
+        /* position: fixed;*/
+      }
+    }      
 @media only screen and (max-width:810px) {
     /* #mydancing{display: block;
       position: fixed;
@@ -441,11 +472,11 @@ color: #5FD068;}
 
 @media only screen and (max-width:846px) {
       /* #view{visibility: visible;} */
-      header {display: none;}
+      /* header {display: none;}
     #view{
       display: block;
-      /* position: fixed;*/
-    }
+
+    } */
     .social{
       margin-top: 5%;
       margin-right: 8%;
@@ -537,11 +568,17 @@ background-size: 210%;
   .navbar .nav_right ul li .omg{
     width: 15px;
   }
+  .social{
+    margin-right: 2%;
+  }
+  .edges{
+    width: 78%;
+  }
   .forming{
     font-size: 3vw;
   }
 }
-@media only screen and (max-width:400px){
+@media only screen and (max-width:450px){
   #mydancing{
     background-size: 150%;
   }
