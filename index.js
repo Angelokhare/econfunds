@@ -18,6 +18,7 @@ app.get("/", (request, response)=>{
 
 app.get("/home", (request, response)=>{
     var day=new Date().getFullYear()
+    // for(let i=1; i<251; i++){
     const options = {
         "method": "GET",
         "hostname": "coingecko.p.rapidapi.com",
@@ -29,7 +30,6 @@ app.get("/home", (request, response)=>{
             "useQueryString": true
         }
     };
-    
     const req = http.request(options, function (res) {
         const chunks = [];
     
@@ -43,10 +43,13 @@ app.get("/home", (request, response)=>{
             // var dave=body.toString()
             // response.render("home", {fd:dave})
             response.render("home", {fan:day})
-        });
     });
+    }
+    );
     
     req.end();
+// }
+
 })   
 
 app.get("/signup", (request, response)=>{response.render("signup")})

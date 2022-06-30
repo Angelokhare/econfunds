@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
 </head>
-  <body  id="coming">
+  <body  class="coming">
     <!-- <video autoplay muted loop playsinline id="myVideo"><source src="static/tradshort.mp4" type="video/mp4"></video> -->
     <!-- <video autoplay muted loop playsinline id="mydancing"><source src="static/tradinglong.mp4" type="video/mp4"></video> -->
     <header>
@@ -54,15 +54,18 @@
                <div class="dd_menu">
                  <div class="dd_left">
                    <ul>
+                    <li><a href="/"><img class="icon" src="static/back.png" alt=""></a></li>
                     <li><a href="/signup"><img class="icon" src="static/register.png" alt=""></a></li>
                     <li><a href="/login"><img class="icon" src="static/key.png" alt=""></a></li>
-                    <li><a href="/convert"><img class="icon" src="static/key.png" alt=""></a></li>
+                    <li><a href="/convert"><img class="icon" src="static/exchange-rate.png" alt=""></a></li>
+
 
                    </ul>
        
                  </div>
                  <div class="dd_right">
                    <ul>
+                    <li><a class="init" href="/"> Home</a></li>
                      <li><a class="init" href="/Signup"> Signup</a></li>
                      <li><a class="init" href="/Login"> Login</a></li>
                      <li><a class="init" href="/Convert"> Convert</a></li>
@@ -75,7 +78,15 @@
           </div>
         </div>
          </div>
+        <!-- <hr> -->
+        <div class="facu lk">
+          <img class="sad" src="static/lamp.png" alt="">
+          
+          </div>
         </div>
+        <h1 class="welcoming">Welcome to <br>The World <br> Of <br> <i class="corny"> Finance </i></h1>
+
+
 
         <footer>
             <div class= "bottom"><h5 class="copyright">Copyright © econfunds <%= fan %></h5></div>
@@ -112,6 +123,7 @@
             else{
               cod.setAttribute("src", "static/menu.png")}
             }
+
           // else{
           //   if(cod.getAttribute("src")== "static/cancel.png"){
           //     cod.setAttribute("src", "static/menu.png")}
@@ -120,6 +132,20 @@
           //   }
             // })
           })
+          var yod= document.querySelector(".sad");
+
+yod.addEventListener("click", function(){
+ if(window.navigator.onLine==true){
+ if(yod.getAttribute("src")== "static/lamp.png"){
+   yod.setAttribute("src", "static/night-mode.png")
+  document.querySelector("body").classList.remove("coming")
+  document.querySelector("body").classList.add("going")}
+ else{
+   yod.setAttribute("src", "static/lamp.png")
+   document.querySelector("body").classList.remove("going")
+  document.querySelector("body").classList.add("coming")}
+ }
+})
          </script>
 
 </body>

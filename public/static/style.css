@@ -14,6 +14,7 @@
   background-color: white;
   /* opacity: 90%; */
   display: flex;
+  border-bottom: 3px solid #7D9D9C;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
@@ -67,11 +68,13 @@ vertical-align: middle;
   box-shadow: 0 0 3px rgba(0,0,0,0.25);
   border-radius: 15px;
   display: none;
+  z-index: 2;
 
 }
 
 .navbar .dd_menu .dd_left{
   background: rgba(0,0,0, 0.4);
+  z-index: 2;
   /* background: #5F7161; */
   padding: 15px 5px;
   border-bottom-left-radius: 15px;
@@ -108,6 +111,7 @@ vertical-align: middle;
 
 .navbar .nav_right ul li.li_main.active .dd_menu{
   display: flex;
+  z-index: 3;
 }
 /* keep off */
 
@@ -169,8 +173,11 @@ vertical-align: middle;
   font-family: 'Merienda', cursive;
 
 }
-#coming{
+.coming{
   background-color: #F7F5F2;
+}
+.going{
+  background-color: #9EB23B;
 }
 .kl{
   margin-left: 25px;
@@ -242,7 +249,37 @@ header {
 .copyright{
   font-size: 70%;
 }
+.yes{
+  padding-right: 30%;
+}
+.sad{
+  width: 25px; 
+  /* margin-top: 7%; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6px;
 
+  background-color:#000;
+}
+/* .lk{
+  background-color: #3A5BA0;
+} */
+
+.scope{
+  padding-right: 25px;
+  background: url("static/eye.png") no-repeat right;
+  background-size: 20px;
+}
+.facu{
+  /* background-color: #fff; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* margin-bottom: 10%; */
+  width:100%; 
+  position: fixed;
+  margin-top: 8%;
+ 
+}
 footer {
   /* position:fixed; */
   /* bottom:0; */
@@ -519,6 +556,9 @@ font-size: 3vw;}
 @media only screen and (max-width:500px){
   .welcoming {
   font-size: 550%;}
+  .facu{
+    margin-top: 10%;
+  }
 }
 
 @media only screen and (max-width:992px){
@@ -585,12 +625,13 @@ background-size: 210%;
   #dapping{
     background-size: 150%;
       }
+
+      .facu{
+        margin-top: 13%;
+      }
 }
-/* @media only screen and (max-width:440px){
-  .navbar .nav_right ul li .omg{
-    width: 15px;
+@media only screen and (max-width:625px){
+ .facu{
+    margin-top: 10%;
   }
-  .forming{
-    font-size: 3vw;
-  }
-} */
+}
