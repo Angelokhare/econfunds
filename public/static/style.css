@@ -266,11 +266,11 @@ header {
   background-color: #3A5BA0;
 } */
 
-.scope{
-  padding-right: 25px;
-  background: url("static/eye.png") no-repeat right;
+/* .scope {
+  padding-left: 25%;
+  background: url("eye.png") no-repeat left;
   background-size: 20px;
-}
+} */
 .facu{
   /* background-color: #fff; */
   /* background-color: rgba(0, 0, 0, 0.5); */
@@ -339,7 +339,7 @@ font-family: 'Caveat', cursive; }  */
     display: block;
   }  
 
-.docking {
+  .docking {
     list-style: none;
   } 
   .tic{
@@ -499,13 +499,13 @@ color: #5FD068;}
       }  */
     /* #myVideo{display: none;} } */
 
-
+/* 
 @media only screen and (max-width:980px) {
       #myVideo {
         position: fixed;
         width: 152%;
         opacity: 80%;
-      } }    
+      } }     */
 
 @media only screen and (max-width:846px) {
       /* #view{visibility: visible;} */
@@ -635,3 +635,19 @@ background-size: 210%;
     margin-top: 10%;
   }
 }
+@media only screen and (max-width:285px){
+  footer{
+   width: 100%;
+   position: fixed;
+  }
+  .social{
+   margin-right: 6%;
+  }
+  .ve{
+   padding: 0px 18px;
+ 
+  }
+  .edges{
+    width: 75%;
+  }
+   } 

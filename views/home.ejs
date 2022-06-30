@@ -18,12 +18,13 @@
   <body  class="coming">
     <!-- <video autoplay muted loop playsinline id="myVideo"><source src="static/tradshort.mp4" type="video/mp4"></video> -->
     <!-- <video autoplay muted loop playsinline id="mydancing"><source src="static/tradinglong.mp4" type="video/mp4"></video> -->
-    <header>
+    <header class="">
       <img class="icon-home" src="static/trade.png" alt="">
-    <h1 class="heading"> Econ<span class="secname">funds</span></h1>
+    <h1 class="heading for-dark"> Econ<span class="secname">funds</span></h1>
       <nav>
         <ul class="docking">
-         
+          
+          <li><img class="sad" src="static/moon.png" alt=""></li>
           <li><a class="decoration tic"  >About</a></li>
           <li><a class="decoration tic"  href="">Features</a></li>
           <!-- <li><a class="decoration tic"  href="">Blog</a></li> -->
@@ -120,6 +121,10 @@
             if(window.navigator.onLine==true){
             if(cod.getAttribute("src")== "static/menu.png"){
               cod.setAttribute("src", "static/cancel.png")}
+            else if(cod.getAttribute("src")== "static/more.png"){
+              cod.setAttribute("src", "static/close.png")}
+            else if(cod.getAttribute("src")== "static/close.png"){
+              cod.setAttribute("src", "static/more.png")}
             else{
               cod.setAttribute("src", "static/menu.png")}
             }
@@ -132,30 +137,58 @@
           //   }
             // })
           })
-          var yod= document.querySelector(".sad");
-
-yod.addEventListener("click", function(){
+          
+          for(var i=0; i<2; i++){
+          // var yod[1];
+  var yod= document.querySelectorAll(".sad")[i]
+  yod.addEventListener("click", function(){
  if(window.navigator.onLine==true){
  if(yod.getAttribute("src")== "static/moon.png"){
    yod.setAttribute("src", "static/brightness.png")
   document.querySelector("body").classList.remove("coming")
   document.querySelector("body").classList.add("going")
-  document.querySelectorAll("div")[2].classList.remove("jj")
+  document.querySelector("header").classList.add("ss")
+  document.querySelectorAll("div")[2].classList.remove("je")
   document.querySelectorAll("div")[2].classList.add("ss")
   document.querySelectorAll("h1")[1].classList.remove("for-dark")
   document.querySelectorAll("h1")[1].classList.add("for-white")
+  document.querySelectorAll("h1")[0].classList.remove("for-dark")
+  document.querySelectorAll("h1")[0].classList.add("for-white")
+  // jack=document.querySelector(".omg").setAttribute("src", "static/more.png")
+  if(document.querySelector(".omg").getAttribute("src")== "static/menu.png"){
+    document.querySelector(".omg").setAttribute("src", "static/more.png")}
+
+  else if(document.querySelector(".omg").getAttribute("src")== "static/cancel.png"){
+    document.querySelector(".omg").setAttribute("src", "static/close.png")}  
+  // jack.addEventListener("click", function(){
+  // if(window.navigator.onLine==true){
+  //           if(jack.getAttribute("src")== "static/more.png"){
+  //             jack.setAttribute("src", "static/close.png")}
+  //           else{
+  //             jack.setAttribute.setAttribute("src", "static/more.png")}
+  //           }})
 }
  else{
    yod.setAttribute("src", "static/moon.png")
+   document.querySelector("header").classList.remove("ss")
    document.querySelector("body").classList.remove("going")
    document.querySelectorAll("div")[2].classList.remove("ss")
-   document.querySelectorAll("div")[2].classList.add("jj")
+   document.querySelectorAll("div")[2].classList.add("je")
   document.querySelector("body").classList.add("coming")
   document.querySelectorAll("h1")[1].classList.add("for-dark")
   document.querySelectorAll("h1")[1].classList.remove("for-white")
+  document.querySelectorAll("h1")[0].classList.add("for-dark")
+  document.querySelectorAll("h1")[0].classList.remove("for-white")
+
+  if(document.querySelector(".omg").getAttribute("src")== "static/more.png"){
+    document.querySelector(".omg").setAttribute("src", "static/menu.png")}
+
+  else if(document.querySelector(".omg").getAttribute("src")== "static/close.png"){
+    document.querySelector(".omg").setAttribute("src", "static/cancel.png")}
 }
  }
 })
+}
          </script>
 
 </body>
