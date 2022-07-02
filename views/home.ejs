@@ -100,9 +100,6 @@
               </li>
             </ul>
           </div>
-        <% for(let i=0; i<=99; i++){ %>
-<%= fact[i].id %>
- <% } %>
  <div class="lw vain hid">
       <img class="rap" src="static/server.png" alt="">
       <h1 class="wer">No Network</h1>
@@ -111,6 +108,28 @@
     Dismiss
     </li>
   </ul>
+</div>
+
+<div class="qer hiz">
+<% for(let i=0; i<=99; i++){ %>
+<div class="drapper">
+  <div class="item">
+    <span class="num"><%= fact[i].market_cap_rank %></span>
+  </div>
+  <div class="item">
+    <img class="crap" src=" <%= fact[i].image %>" alt="">
+  </div>
+  <div class="item">
+      <%= fact[i].name %>
+  </div>
+  <div class="item">
+    <span class="vic"><%= fact[i].market_cap %></span>
+  </div>
+  <div class="item">
+    <span class="cur"><%= fact[i].current_price %></span>
+  </div>
+</div>
+<% } %>
 </div>
 </div>
 
@@ -141,7 +160,7 @@
            })
 
            var cod= document.querySelector(".omg");
-
+           
            cod.addEventListener("click", function(){
             if(window.navigator.onLine==true){
             if(cod.getAttribute("src")== "static/menu.png"){
@@ -176,15 +195,21 @@
         var dd=document.querySelector(".cc")
     fr.addEventListener("click", function(){
       fr.classList.add("vain")
+      document.querySelector(".qer").classList.remove("hid")
+      document.querySelector(".qer").classList.add("hiz")
     ee.classList.remove("vain")
     dd.classList.remove("vain")
   })
   ee.addEventListener("click", function(){
+    document.querySelector(".qer").classList.add("hid")
+    document.querySelector(".qer").classList.remove("hiz")
     fr.classList.remove("vain")
     ee.classList.add("vain")
     dd.classList.remove("vain")
   })
   dd.addEventListener("click", function(){
+    document.querySelector(".qer").classList.add("hid")
+    document.querySelector(".qer").classList.remove("hiz")
     fr.classList.remove("vain")
     ee.classList.remove("vain")
     dd.classList.add("vain")
@@ -334,6 +359,8 @@ window.addEventListener("online", () => {
 
 window.addEventListener("offline", () => {
   hasNetwork(false);
+  var cod= document.querySelector(".omg");
+ cod.setAttribute("src", "static/menu.png")
 });
 
 });

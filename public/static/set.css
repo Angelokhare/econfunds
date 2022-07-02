@@ -190,6 +190,13 @@
     width: 8%;
     /* margin-left: 2%; */
   }
+  .crap{
+    width: 11%;
+    /* margin-top: 2%; */
+  }
+  /* .num{
+    margin-left: -30%;
+  } */
   .mj{
     text-align: center;
     background-color: #9CB4CC;
@@ -289,7 +296,7 @@ footer {
     width:100%;
     color: white;
     padding-top: 2%;
-    /* margin-top: 20%; */
+    margin-top: 10%;
     padding-bottom: 2%;
     font-family: 'Varela Round', sans-serif;
     text-align: center;
@@ -317,6 +324,54 @@ footer {
 .going{
     background-color: #377D71;
   }  
+
+
+
+  .hij{
+    display: flex;
+    }
+    .hiz{
+      display: block;
+      }
+    .hid{
+      display: none;
+    }
+    
+    .vic{
+      margin-left: 148%;
+      /* margin-right: 20%; */
+
+    }
+    .cur{
+      margin-left: 500%;
+      /* margin-right: 20%; */
+
+    }
+    .drapper{
+      /* max-height: 200px; */
+      border: 3px solid #ddd;
+      display: flex;
+      overflow-x: auto;
+      font-family: 'Varela Round', sans-serif;
+      margin-left: 5%;
+      margin-right:5%;
+      /* margin-bottom: 10%; */
+    }
+    .drapper::-webkit-scrollbar{
+     width: 0;
+    }
+    
+    .drapper .item{
+      min-width: 10%;
+      /* height: 110px; */
+      /* line-height: 110px; */
+      text-align: center;
+      /* background-color: #ddd; */
+      margin-right: 2%;
+      /* border-radius: 50px; */
+      margin-bottom: 2%;
+    }
+    
 
   @media only screen and (max-width:1151px) {
     /* #view{visibility: visible;} */
@@ -374,12 +429,8 @@ object-fit: cover;
   font-size: 4vw;
 }
 }
-.hij{
-display: flex;
-}
-.hid{
-  display: none;
-}
+
+
 @media only screen and (max-width:625px){
   .facu{
     margin-top: 10%;

@@ -25,7 +25,7 @@ app.get("/home", (request, response)=>{
     const options = {
       method: 'GET',
       url: 'https://coingecko.p.rapidapi.com/coins/markets',
-      params: {vs_currency: 'usd', page: '1', per_page: '250', order: 'market_cap_desc'},
+      params: {vs_currency: 'usd', page: '1', per_page: '100', order: 'market_cap_desc'},
       headers: {
         'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
