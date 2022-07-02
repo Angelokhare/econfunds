@@ -89,13 +89,13 @@
         <div class="vad for-dark">
           <div class="docking mj">
             <ul>
-              <li class="we">
+              <li class="we aa vain">
                 Crypto
               </li>
-              <li class="we">
+              <li class="we bb">
                 Forex
               </li>
-              <li class="we">
+              <li class="we cc">
                 Stock
               </li>
             </ul>
@@ -152,7 +152,26 @@
           //   }
             // })
           })
-          
+
+        var fr= document.querySelector(".aa")
+       var ee= document.querySelector(".bb")
+        var dd=document.querySelector(".cc")
+    fr.addEventListener("click", function(){
+      fr.classList.add("vain")
+    ee.classList.remove("vain")
+    dd.classList.remove("vain")
+  })
+  ee.addEventListener("click", function(){
+    fr.classList.remove("vain")
+    ee.classList.add("vain")
+    dd.classList.remove("vain")
+  })
+  dd.addEventListener("click", function(){
+    fr.classList.remove("vain")
+    ee.classList.remove("vain")
+    dd.classList.add("vain")
+  })
+
           for(var i=0; i<2; i++){
           // var yod[1];
   var yod= document.querySelectorAll(".sad")[i]
@@ -172,6 +191,34 @@
   document.querySelectorAll(".vad")[0].classList.add("for-white")
   document.querySelectorAll("h1")[0].classList.remove("for-dark")
   document.querySelectorAll("h1")[0].classList.add("for-white")
+  var fr=document.querySelector(".aa");
+  var ee=document.querySelector(".bb");
+  var dd=document.querySelector(".cc");
+if(ee.classList.contains("vain")){
+  ee.classList.remove("vain")
+  ee.classList.add("tap");}
+else if(fr.classList.contains("vain")){
+  fr.classList.remove("vain")
+  fr.classList.add("tap");}
+else if(dd.classList.contains("vain")){
+  dd.classList.remove("vain")
+  dd.classList.add("tap");}    
+
+fr.addEventListener("click", function(){
+      fr.classList.add("tap")
+    ee.classList.remove("tap")
+    dd.classList.remove("tap")
+  })
+  ee.addEventListener("click", function(){
+    fr.classList.remove("tap")
+    ee.classList.add("tap")
+    dd.classList.remove("tap")
+  })
+  dd.addEventListener("click", function(){
+    fr.classList.remove("tap")
+    ee.classList.remove("tap")
+    dd.classList.add("tap")
+  })
   // jack=document.querySelector(".omg").setAttribute("src", "static/more.png")
   if(document.querySelector(".omg").getAttribute("src")== "static/menu.png"){
     document.querySelector(".omg").setAttribute("src", "static/more.png")}
@@ -200,6 +247,37 @@
   document.querySelector(".mj").style.backgroundColor="#9CB4CC"
   document.querySelectorAll("h1")[0].classList.add("for-dark")
   document.querySelectorAll("h1")[0].classList.remove("for-white")
+      var fr= document.querySelector(".aa")
+       var ee=document.querySelector(".bb")
+        var dd=document.querySelector(".cc")
+if(ee.classList.contains("tap")){
+  ee.classList.remove("tap")
+  ee.classList.add("vain");}
+else if(fr.classList.contains("tap")){
+  fr.classList.remove("tap")
+  fr.classList.add("vain");}
+else if(dd.classList.contains("tap")){
+  dd.classList.remove("tap")
+  dd.classList.add("vain");} 
+
+  fr.addEventListener("click", function(){
+      fr.classList.add("vain")
+    ee.classList.remove("vain")
+    dd.classList.remove("vain")
+    fr.classList.remove("tap")
+  })
+  ee.addEventListener("click", function(){
+    fr.classList.remove("vain")
+    ee.classList.add("vain")
+    ee.classList.remove("tap")
+    dd.classList.remove("vain")
+  })
+  dd.addEventListener("click", function(){
+    fr.classList.remove("vain")
+    ee.classList.remove("vain")
+    dd.classList.add("vain")
+    dd.classList.remove("tap")
+  })
 
   if(document.querySelector(".omg").getAttribute("src")== "static/more.png"){
     document.querySelector(".omg").setAttribute("src", "static/menu.png")}
@@ -207,6 +285,7 @@
   else if(document.querySelector(".omg").getAttribute("src")== "static/close.png"){
     document.querySelector(".omg").setAttribute("src", "static/cancel.png")}
 }
+ 
  }
 })
 }

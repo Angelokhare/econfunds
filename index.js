@@ -39,7 +39,8 @@ app.get("/home", (request, response)=>{
         qq = hj
         // response.render("home", {fan:day, fact:hj})
     }).catch(function (error) {
-        console.error(error);
+        // console.error(error);
+        response.redirect("/")
     });
     console.log(qq)
     response.render("home", {fan:day, fact:qq})
