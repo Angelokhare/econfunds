@@ -103,7 +103,17 @@
         <% for(let i=0; i<=99; i++){ %>
 <%= fact[i].id %>
  <% } %>
+ <div class="lw vain hid">
+      <img class="rap" src="static/server.png" alt="">
+      <h1 class="wer">No Network</h1>
+      <ul class="bar">
+    <li class="sap">
+    Dismiss
+    </li>
+  </ul>
 </div>
+</div>
+
         <footer>
             <div class= "bottom"><h5 class="copyright">Copyright © econfunds <%= fan %></h5></div>
             <ul class="social">
@@ -152,6 +162,21 @@
           //   }
             // })
           })
+          var hi= document.querySelector(".sap")
+            hi.addEventListener("click", ()=>{
+              document.querySelector(".lw").classList.remove("hij")
+              document.querySelector(".lw").classList.add("hid")
+            })
+            if(window.navigator.onLine==false){
+              document.querySelector(".lw").classList.remove("hid")
+              document.querySelector(".lw").classList.add("hij")
+            }
+            if(window.navigator.onLine==true){
+              document.querySelector(".lw").classList.add("hid")
+              document.querySelector(".lw").classList.remove("hij")
+            }
+            
+
 
         var fr= document.querySelector(".aa")
        var ee= document.querySelector(".bb")
@@ -184,6 +209,8 @@
   document.querySelector("header").classList.add("ss")
   document.querySelectorAll("div")[2].classList.remove("je")
   document.querySelectorAll("div")[2].classList.add("ss")
+  document.querySelector(".lw").classList.remove("vain")
+  document.querySelector(".lw").classList.add("vet")
   document.querySelectorAll("h1")[1].classList.remove("for-dark")
   document.querySelectorAll("h1")[1].classList.add("for-white")
   document.querySelectorAll(".vad")[0].classList.remove("for-dark")
@@ -243,6 +270,8 @@ fr.addEventListener("click", function(){
   document.querySelectorAll("h1")[1].classList.add("for-dark")
   document.querySelectorAll("h1")[1].classList.remove("for-white")
   document.querySelectorAll(".vad")[0].classList.add("for-dark")
+  document.querySelector(".lw").classList.add("vain")
+  document.querySelector(".lw").classList.remove("vet")
   document.querySelectorAll(".vad")[0].classList.remove("for-white")
   document.querySelector(".mj").style.backgroundColor="#9CB4CC"
   document.querySelectorAll("h1")[0].classList.add("for-dark")
