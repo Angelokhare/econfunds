@@ -375,7 +375,7 @@ object-fit: cover;
 }
 }
 .hij{
-display: block;
+display: flex;
 }
 .hid{
   display: none;

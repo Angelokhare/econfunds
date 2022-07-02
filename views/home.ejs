@@ -154,27 +154,20 @@
               cod.setAttribute("src", "static/menu.png")}
             }
 
-          // else{
-          //   if(cod.getAttribute("src")== "static/cancel.png"){
-          //     cod.setAttribute("src", "static/menu.png")}
-          //   else{
-          //     cod.setAttribute("src", "static/menu.png")}
-          //   }
-            // })
           })
           var hi= document.querySelector(".sap")
             hi.addEventListener("click", ()=>{
               document.querySelector(".lw").classList.remove("hij")
               document.querySelector(".lw").classList.add("hid")
             })
-            if(window.navigator.onLine==false){
+            window.addEventListener('online', function(){
               document.querySelector(".lw").classList.remove("hid")
               document.querySelector(".lw").classList.add("hij")
-            }
-            if(window.navigator.onLine==true){
-              document.querySelector(".lw").classList.add("hid")
-              document.querySelector(".lw").classList.remove("hij")
-            }
+            });
+            // if(window.navigator.onLine==true){
+            //   document.querySelector(".lw").classList.add("hid")
+            //   document.querySelector(".lw").classList.remove("hij")
+            // }
             
 
 
@@ -318,6 +311,32 @@ else if(dd.classList.contains("tap")){
  }
 })
 }
+
+
+function hasNetwork(onLine){
+  const element = document.querySelector(".lw");
+  if (onLine){
+    element.classList.remove("hij");
+    element.classList.add("hid");
+  }
+  else {
+    element.classList.add("hij");
+    element.classList.remove("hid");
+  }
+}
+window.addEventListener("load", () => {
+  hasNetwork(navigator.onLine);
+
+
+window.addEventListener("online", () => {
+  hasNetwork(true);
+});
+
+window.addEventListener("offline", () => {
+  hasNetwork(false);
+});
+
+});
          </script>
 
 </body>
