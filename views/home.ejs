@@ -24,13 +24,13 @@
       <nav>
         <ul class="docking">
           
-          <li><img class="sad" src="static/moon.png" alt=""></li>
-          <li><a class="decoration tic"  >About</a></li>
-          <li><a class="decoration tic"  href="">Features</a></li>
+          <li class="pre"><img class="sad" src="static/moon.png" alt=""></li>
+          <li class="pre"><a class="decoration tic"  >About</a></li>
+          <li class="pre"><a class="decoration tic"  href="">Features</a></li>
           <!-- <li><a class="decoration tic"  href="">Blog</a></li> -->
-          <li><a class="decoration tic"  href="">FAQ</a></li>
-          <li><a class=" tic sr"  href="/Login">Login</a></li>
-          <li><button class="btn tap" id="ff" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li>
+          <li class="pre"><a class="decoration tic"  href="">FAQ</a></li>
+          <li class="pre"><a class=" tic sr"  href="/Login">Login</a></li>
+          <li class="pre"><button class="btn tap" id="ff" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li>
           
         </ul>
       </nav>
@@ -86,9 +86,24 @@
           </div> -->
         </div>
         <h1 class="welcoming">Welcome to <br>The World <br> Of <br> <i class="corny"> Finance </i></h1>
-
-
-
+        <div class="vad for-dark">
+          <div class="docking mj">
+            <ul>
+              <li class="we">
+                Crypto
+              </li>
+              <li class="we">
+                Forex
+              </li>
+              <li class="we">
+                Stock
+              </li>
+            </ul>
+          </div>
+        <% for(let i=0; i<=99; i++){ %>
+<%= fact[i].id %>
+ <% } %>
+</div>
         <footer>
             <div class= "bottom"><h5 class="copyright">Copyright © econfunds <%= fan %></h5></div>
             <ul class="social">
@@ -152,6 +167,9 @@
   document.querySelectorAll("div")[2].classList.add("ss")
   document.querySelectorAll("h1")[1].classList.remove("for-dark")
   document.querySelectorAll("h1")[1].classList.add("for-white")
+  document.querySelectorAll(".vad")[0].classList.remove("for-dark")
+  document.querySelector(".mj").style.backgroundColor="#112B3C"
+  document.querySelectorAll(".vad")[0].classList.add("for-white")
   document.querySelectorAll("h1")[0].classList.remove("for-dark")
   document.querySelectorAll("h1")[0].classList.add("for-white")
   // jack=document.querySelector(".omg").setAttribute("src", "static/more.png")
@@ -177,6 +195,9 @@
   document.querySelector("body").classList.add("coming")
   document.querySelectorAll("h1")[1].classList.add("for-dark")
   document.querySelectorAll("h1")[1].classList.remove("for-white")
+  document.querySelectorAll(".vad")[0].classList.add("for-dark")
+  document.querySelectorAll(".vad")[0].classList.remove("for-white")
+  document.querySelector(".mj").style.backgroundColor="#9CB4CC"
   document.querySelectorAll("h1")[0].classList.add("for-dark")
   document.querySelectorAll("h1")[0].classList.remove("for-white")
 
