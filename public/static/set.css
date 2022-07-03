@@ -347,6 +347,17 @@ footer {
       /* margin-right: 20%; */
 
     }
+    .tur{
+      margin-left: 358%;
+      /* margin-right: 20%; */
+
+    }
+    .green{
+      color: green;
+    }
+    .red{
+      color: red;
+    }
     .drapper{
       /* max-height: 200px; */
       border: 1px solid #ddd;

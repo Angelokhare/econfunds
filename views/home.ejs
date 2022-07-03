@@ -123,12 +123,12 @@
       <%= fact[i].name %>
   </div>
   <div class="item">
-    <span class="cur">$<%= fact[i].current_price %></span>
+      <span class="bor cur">$<%= fact[i].current_price %></span>
   </div>
   <div class="item">
-    <span class="vic">$<%= fact[i].market_cap %></span>
+    <span class="vic gij">$<%= fact[i].market_cap %></span>
   </div>
-
+  <span class="hid fin"><%= fact[i].price_change_24h %></span>
 </div>
 <% } %>
 </div>
@@ -176,6 +176,34 @@
             }
 
           })
+
+          var hd= document.querySelectorAll(".gij");
+          var hr= document.querySelectorAll(".bor");
+          for(var i = 0; i < hr.length; i++) {
+          if(hr[i].innerHTML.length>=10){
+            hd[i].classList.add("tur")
+            hd[i].classList.remove("vic")
+          }
+          else if(hr[i].innerHTML.length <10){
+            hd[i].classList.add("vic")
+            hd[i].classList.remove("tur")
+          }
+        }
+
+
+          var hoy= document.querySelectorAll(".fin");
+          for(var i = 0; i < hoy.length; i++) {
+          if(hoy[i].innerHTML[0]=="-"){
+            hr[i].classList.add("red")
+            hr[i].classList.remove("green")
+          }
+          else if(hr[i].innerHTML[0]!="-"){
+            hr[i].classList.add("green")
+            hr[i].classList.remove("red")
+          }
+        }
+
+
           var hi= document.querySelector(".sap")
             hi.addEventListener("click", ()=>{
               document.querySelector(".lw").classList.remove("hij")
