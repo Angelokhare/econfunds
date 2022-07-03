@@ -123,11 +123,12 @@
       <%= fact[i].name %>
   </div>
   <div class="item">
-    <span class="vic"><%= fact[i].market_cap %></span>
+    <span class="cur">$<%= fact[i].current_price %></span>
   </div>
   <div class="item">
-    <span class="cur"><%= fact[i].current_price %></span>
+    <span class="vic">$<%= fact[i].market_cap %></span>
   </div>
+
 </div>
 <% } %>
 </div>
@@ -170,7 +171,8 @@
             else if(cod.getAttribute("src")== "static/close.png"){
               cod.setAttribute("src", "static/more.png")}
             else{
-              cod.setAttribute("src", "static/menu.png")}
+              cod.setAttribute("src", "static/menu.png");
+          }
             }
 
           })
@@ -359,8 +361,8 @@ window.addEventListener("online", () => {
 
 window.addEventListener("offline", () => {
   hasNetwork(false);
-  var cod= document.querySelector(".omg");
- cod.setAttribute("src", "static/menu.png")
+//   var cod= document.querySelector(".omg");
+//  cod.setAttribute("src", "static/menu.png")
 });
 
 });

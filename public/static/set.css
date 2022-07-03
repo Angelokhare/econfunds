@@ -338,18 +338,18 @@ footer {
     }
     
     .vic{
-      margin-left: 148%;
+      margin-left: 258%;
       /* margin-right: 20%; */
 
     }
     .cur{
-      margin-left: 500%;
+      margin-left: 200%;
       /* margin-right: 20%; */
 
     }
     .drapper{
       /* max-height: 200px; */
-      border: 3px solid #ddd;
+      border: 1px solid #ddd;
       display: flex;
       overflow-x: auto;
       font-family: 'Varela Round', sans-serif;
@@ -479,11 +479,14 @@ font-size: 550%;}
   margin-top: 10%;
 }
 .we{
-  padding: 3% 25px;
+  padding: 3% 23px;
 }
 /* .mj{
   padding-top: 4%;
 } */
+.crap{
+  width: 16%;
+}
 }
 
 @media only screen and (max-width:992px){
@@ -510,7 +513,7 @@ font-size: 550%;}
   width: 20px;
 }
 .we{
-  padding: 3% 23px;
+  padding: 3% 20px;
 }
 
 .facu{
@@ -559,7 +562,7 @@ footer{
   font-size: 3vw;
 }
 .we{
-  padding: 3% 20px;
+  padding: 3% 18px;
 }
 }
 /* @media only screen and (max-width:450px){
