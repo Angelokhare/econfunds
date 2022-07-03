@@ -17,6 +17,8 @@ app.get("/", (request, response)=>{
     response.render("index", {fan:day})})
 
   var qq=""
+  var te= 1
+  te.toString
 app.get("/home", (request, response)=>{
 
     var day=new Date().getFullYear()
@@ -25,7 +27,7 @@ app.get("/home", (request, response)=>{
     const options = {
       method: 'GET',
       url: 'https://coingecko.p.rapidapi.com/coins/markets',
-      params: {vs_currency: 'usd', page: '1', per_page: '100', order: 'market_cap_desc'},
+      params: {vs_currency: 'usd', page:" + te ", per_page: '100', order: 'market_cap_desc'},
       headers: {
         'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
@@ -43,7 +45,7 @@ app.get("/home", (request, response)=>{
         response.redirect("/")
     });
     console.log(qq)
-    response.render("home", {fan:day, fact:qq})
+    response.render("home", {fan:day, fact:qq, team:te})
         // const options = {
         //     "method": "GET",
         //     "hostname": "coingecko.p.rapidapi.com",
@@ -79,6 +81,9 @@ app.get("/home", (request, response)=>{
     //    var hj= [{"hgyfy": "ff3tt"}, {"hgyfy": "fftt4"},{"hgyfy": "ff5tt"},{"hgyfy": "fftt"}]
     //    console.log(hj[1])
     
+app.post("/home", (request, response)=>{ 
+  te++
+  response.redirect("/home")})    
 app.get("/signup", (request, response)=>{response.render("signup")})
 app.get("/convert", (request, response)=>{response.render("convert")})
 

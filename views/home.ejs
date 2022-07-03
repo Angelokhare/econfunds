@@ -111,7 +111,7 @@
 </div>
 
 <div class="qer hiz">
-  <div class="drapper">
+  <div class="rapper">
     <div class="phone">
       S/N
     </div>
@@ -125,6 +125,7 @@
       Price
     </div>
   </div>
+  <!-- <div class="farm"> -->
 <% for(let i=0; i<=99; i++){ %>
 <div class="drapper">
   <div class="item">
@@ -134,7 +135,8 @@
     <img class="crap" src=" <%= fact[i].image %>" alt="">
   </div>
   <div class="item">
-      <%= fact[i].name %>
+     <a class="line" style="color: #000;" href="/home/<%=fact[i].id %>"> <%= fact[i].name %> <br></a>
+     <span style="background-color: #DFDFDF;"> <%= fact[i].symbol %> </span>
   </div>
   <div class="item">
       <span class="bor cur">$<%= fact[i].current_price %></span>
@@ -142,13 +144,42 @@
   <div class="item">
     <span class="vic gij">$<%= fact[i].market_cap %></span>
   </div>
+  <div class="item">
+    <span class="aq" style="margin-left: 800%;"><%= fact[i].price_change_percentage_24h %></span>
+</div>
   <span class="hid fin"><%= fact[i].price_change_24h %></span>
   <span class="hid fit"><%= fact[i].market_cap_change_24h %></span>
 </div>
 <% } %>
+<div class="docking bp">
+  <ul>
+    <li class="re vain">
+      <
+    </li>
+    <li class="re">
+      Page: <%= team %>
+    </li>
+    <li class="re">
+      <form action="/home" method="post"> 
+       <!-- <a href="" type="submit"> ></a> -->
+       <button type="submit" style="border: none;"> > </button>
+      </form>
+    </li>
+  </ul>
+</div>
+  <!-- </div> -->
 </div>
 </div>
 
+<div class="bw vain hid">
+  <img class="rap" src="static/server.png" alt="">
+  <h1 class="wer">No Network</h1>
+  <ul class="bar">
+<li class="lap">
+Dismiss
+</li>
+</ul>
+</div>
         <footer>
             <div class= "bottom"><h5 class="copyright">Copyright © econfunds <%= fan %></h5></div>
             <ul class="social">
@@ -205,16 +236,20 @@
           }
         }
 
-
+          var ta= document.querySelectorAll(".aq");
           var hoy= document.querySelectorAll(".fin");
           for(var i = 0; i < hoy.length; i++) {
           if(hoy[i].innerHTML[0]=="-"){
             hr[i].classList.add("red")
             hr[i].classList.remove("green")
+            ta[i].classList.remove("green")
+            ta[i].classList.add("red")
           }
-          else if(hr[i].innerHTML[0]!="-"){
+          else if(hoy[i].innerHTML[0]!="-"){
             hr[i].classList.add("green")
             hr[i].classList.remove("red")
+            ta[i].classList.add("green")
+            ta[i].classList.remove("red")
           }
         }
         var it= document.querySelectorAll(".drapper");
@@ -229,50 +264,81 @@
             it[i].classList.remove("das")
           }
         }
-
       
+
+        var he= document.querySelectorAll(".aq");
+          for(var i = 0; i< he.length; i++){
+            // var mm= document.querySelectorAll(".aq")[i].innerHTML;
+            if(he[i].innerHTML[0]=="-"){
+            var aj =he[i].innerHTML.slice(1, 5)
+            if(he[i].innerHTML.length>=4){
+              var zz =he[i].innerHTML.slice(1, 5)
+            he[i].innerHTML=zz + "%"
+            }
+            else if(he[i].innerHTML.length<4){
+              var zz =he[i].innerHTML.slice(1, 4)
+            he[i].innerHTML=zz + "%"
+            }
+            }
+            else if(he[i].innerHTML[0]!="-"){
+          if(he[i].innerHTML.length>=3){
+            var pp =he[i].innerHTML.slice(0, 4)
+            he[i].innerHTML=pp + "%" 
+          }
+        }
+        }
 
           var hor= document.querySelectorAll(".gij");
           for(var i = 0; i< hor.length; i++){
           if(hor[i].innerHTML.length==13){
             var sd =hor[i].innerHTML.slice(0, 4)
-            hor[i].innerHTML=sd + "B"
+            var td =hor[i].innerHTML.slice(4, 6)
+            hor[i].innerHTML=sd +"."+ td + "B" 
           }
           else if(hor[i].innerHTML.length==12){
             var sd =hor[i].innerHTML.slice(0, 3)
-            hor[i].innerHTML=sd + "B"
+            var td =hor[i].innerHTML.slice(3, 5)
+            hor[i].innerHTML=sd +"."+ td + "B" 
           }
           else if(hor[i].innerHTML.length==11){
             var sd =hor[i].innerHTML.slice(0, 2)
-            hor[i].innerHTML=sd + "B"
+            var td =hor[i].innerHTML.slice(2, 4)
+            hor[i].innerHTML=sd +"."+ td + "B" 
           }
           else if(hor[i].innerHTML.length==10){
             var sd =hor[i].innerHTML.slice(0, 4)
-            hor[i].innerHTML=sd + "M"
+            var td =hor[i].innerHTML.slice(4, 6)
+            hor[i].innerHTML=sd +"."+ td + "M" 
           }
           else if(hor[i].innerHTML.length==9){
             var sd =hor[i].innerHTML.slice(0, 3)
-            hor[i].innerHTML=sd + "M"
+            var td =hor[i].innerHTML.slice(3, 5)
+            hor[i].innerHTML=sd +"."+ td + "M"
           }
           else if(hor[i].innerHTML.length==8){
             var sd =hor[i].innerHTML.slice(0, 2)
-            hor[i].innerHTML=sd + "M"
+            var td =hor[i].innerHTML.slice(2, 4)
+            hor[i].innerHTML=sd +"."+ td + "M"
           }
           else if(hor[i].innerHTML.length==7){
             var sd =hor[i].innerHTML.slice(0, 4)
-            hor[i].innerHTML=sd + "K"
+            var td =hor[i].innerHTML.slice(4, 6)
+            hor[i].innerHTML=sd +"."+ td + "K"
           }
           else if(hor[i].innerHTML.length==6){
             var sd =hor[i].innerHTML.slice(0, 3)
-            hor[i].innerHTML=sd + "K"
+            var td =hor[i].innerHTML.slice(3, 5)
+            hor[i].innerHTML=sd +"."+ td + "K"
           }
           else if(hor[i].innerHTML.length==5){
             var sd =hor[i].innerHTML.slice(0, 2)
-            hor[i].innerHTML=sd + "K"
+            var td =hor[i].innerHTML.slice(2, 4)
+            hor[i].innerHTML=sd +"."+ td + "K"
           }
           else if(hor[i].innerHTML.length==14){
             var sd =hor[i].innerHTML.slice(0, 2)
-            hor[i].innerHTML=sd + "T"
+            var td =hor[i].innerHTML.slice(2, 4)
+            hor[i].innerHTML=sd +"."+ td + "T"
           }
           // else if(hor[i].innerHTML.length==4){
           //   var sd =hor[i].innerHTML.slice(0, 2)
@@ -296,14 +362,33 @@
           }
         }
 
-          var hi= document.querySelector(".sap")
+
+        var hi= document.querySelector(".lap")
             hi.addEventListener("click", ()=>{
               document.querySelector(".lw").classList.remove("hij")
               document.querySelector(".lw").classList.add("hid")
+              document.querySelector(".bw").classList.remove("hij")
+              document.querySelector(".bw").classList.add("hid")
             })
             window.addEventListener('online', function(){
               document.querySelector(".lw").classList.remove("hid")
               document.querySelector(".lw").classList.add("hij")
+              document.querySelector(".bw").classList.remove("hid")
+              document.querySelector(".bw").classList.add("hij")
+            });
+
+          var hi= document.querySelector(".sap")
+            hi.addEventListener("click", ()=>{
+              document.querySelector(".lw").classList.remove("hij")
+              document.querySelector(".lw").classList.add("hid")
+              document.querySelector(".bw").classList.remove("hij")
+              document.querySelector(".bw").classList.add("hid")
+            })
+            window.addEventListener('online', function(){
+              document.querySelector(".lw").classList.remove("hid")
+              document.querySelector(".lw").classList.add("hij")
+              document.querySelector(".bw").classList.remove("hid")
+              document.querySelector(".bw").classList.add("hij")
             });
             // if(window.navigator.onLine==true){
             //   document.querySelector(".lw").classList.add("hid")
@@ -351,6 +436,8 @@
   document.querySelectorAll("div")[2].classList.add("ss")
   document.querySelector(".lw").classList.remove("vain")
   document.querySelector(".lw").classList.add("vet")
+  document.querySelector(".bw").classList.remove("vain")
+  document.querySelector(".bw").classList.add("vet")
   document.querySelectorAll("h1")[1].classList.remove("for-dark")
   document.querySelectorAll("h1")[1].classList.add("for-white")
   document.querySelectorAll(".vad")[0].classList.remove("for-dark")
@@ -412,6 +499,8 @@ fr.addEventListener("click", function(){
   document.querySelectorAll(".vad")[0].classList.add("for-dark")
   document.querySelector(".lw").classList.add("vain")
   document.querySelector(".lw").classList.remove("vet")
+  document.querySelector(".bw").classList.add("vain")
+  document.querySelector(".bw").classList.remove("vet")
   document.querySelectorAll(".vad")[0].classList.remove("for-white")
   document.querySelector(".mj").style.backgroundColor="#9CB4CC"
   document.querySelectorAll("h1")[0].classList.add("for-dark")
@@ -462,13 +551,18 @@ else if(dd.classList.contains("tap")){
 
 function hasNetwork(onLine){
   const element = document.querySelector(".lw");
+  const vak = document.querySelector(".bw");
   if (onLine){
     element.classList.remove("hij");
     element.classList.add("hid");
+    vak.classList.remove("hij");
+    vak.classList.add("hid");
   }
   else {
     element.classList.add("hij");
     element.classList.remove("hid");
+    vak.classList.add("hij");
+    vak.classList.remove("hid");
   }
 }
 window.addEventListener("load", () => {
