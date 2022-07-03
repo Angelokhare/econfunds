@@ -111,10 +111,24 @@
 </div>
 
 <div class="qer hiz">
+  <div class="drapper">
+    <div class="phone">
+      S/N
+    </div>
+    <div class="phone">
+      Image
+    </div>
+    <div class="phone">
+      Name
+    </div>
+    <div class="phone">
+      Price
+    </div>
+  </div>
 <% for(let i=0; i<=99; i++){ %>
 <div class="drapper">
   <div class="item">
-    <span class="num"><%= fact[i].market_cap_rank %></span>
+    <span class="num sam"><%= fact[i].market_cap_rank %></span>
   </div>
   <div class="item">
     <img class="crap" src=" <%= fact[i].image %>" alt="">
@@ -129,6 +143,7 @@
     <span class="vic gij">$<%= fact[i].market_cap %></span>
   </div>
   <span class="hid fin"><%= fact[i].price_change_24h %></span>
+  <span class="hid fit"><%= fact[i].market_cap_change_24h %></span>
 </div>
 <% } %>
 </div>
@@ -202,7 +217,84 @@
             hr[i].classList.remove("red")
           }
         }
+        var it= document.querySelectorAll(".drapper");
+        var hoi= document.querySelectorAll(".sam");
+          for(var i = 0; i < hoi.length; i++) {
+          if(hoi[i].innerHTML% 2==0){
+            it[i].classList.add("das")
+            it[i].classList.remove("bas")
+          }
+          else if(hoi[i].innerHTML%2!=0){
+            it[i].classList.add("bas")
+            it[i].classList.remove("das")
+          }
+        }
 
+      
+
+          var hor= document.querySelectorAll(".gij");
+          for(var i = 0; i< hor.length; i++){
+          if(hor[i].innerHTML.length==13){
+            var sd =hor[i].innerHTML.slice(0, 4)
+            hor[i].innerHTML=sd + "B"
+          }
+          else if(hor[i].innerHTML.length==12){
+            var sd =hor[i].innerHTML.slice(0, 3)
+            hor[i].innerHTML=sd + "B"
+          }
+          else if(hor[i].innerHTML.length==11){
+            var sd =hor[i].innerHTML.slice(0, 2)
+            hor[i].innerHTML=sd + "B"
+          }
+          else if(hor[i].innerHTML.length==10){
+            var sd =hor[i].innerHTML.slice(0, 4)
+            hor[i].innerHTML=sd + "M"
+          }
+          else if(hor[i].innerHTML.length==9){
+            var sd =hor[i].innerHTML.slice(0, 3)
+            hor[i].innerHTML=sd + "M"
+          }
+          else if(hor[i].innerHTML.length==8){
+            var sd =hor[i].innerHTML.slice(0, 2)
+            hor[i].innerHTML=sd + "M"
+          }
+          else if(hor[i].innerHTML.length==7){
+            var sd =hor[i].innerHTML.slice(0, 4)
+            hor[i].innerHTML=sd + "K"
+          }
+          else if(hor[i].innerHTML.length==6){
+            var sd =hor[i].innerHTML.slice(0, 3)
+            hor[i].innerHTML=sd + "K"
+          }
+          else if(hor[i].innerHTML.length==5){
+            var sd =hor[i].innerHTML.slice(0, 2)
+            hor[i].innerHTML=sd + "K"
+          }
+          else if(hor[i].innerHTML.length==14){
+            var sd =hor[i].innerHTML.slice(0, 2)
+            hor[i].innerHTML=sd + "T"
+          }
+          // else if(hor[i].innerHTML.length==4){
+          //   var sd =hor[i].innerHTML.slice(0, 2)
+          //   hor[i].innerHTML=sd + "K"
+          // }
+          // else if(hor[i].innerHTML.length>=7){
+          //   var sd =hor[i].innerHTML.slice(0, 2)
+          //   hor[i].innerHTML=sd + "M"
+          // }
+        }
+
+        var hoq= document.querySelectorAll(".fit");
+          for(var i = 0; i < hoq.length; i++) {
+          if(hoq[i].innerHTML[0]=="-"){
+            hor[i].classList.add("red")
+            hor[i].classList.remove("green")
+          }
+          else if(hoq[i].innerHTML[0]!="-"){
+            hor[i].classList.add("green")
+            hor[i].classList.remove("red")
+          }
+        }
 
           var hi= document.querySelector(".sap")
             hi.addEventListener("click", ()=>{

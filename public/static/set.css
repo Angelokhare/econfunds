@@ -324,9 +324,13 @@ footer {
 .going{
     background-color: #377D71;
   }  
-
-
-
+.das{
+ /* background-color: #F0EBE3; */
+ background-color: #F6FBF4;
+}
+.bas{
+  background-color: #FFF;
+ }
   .hij{
     display: flex;
     }
@@ -338,7 +342,7 @@ footer {
     }
     
     .vic{
-      margin-left: 258%;
+      margin-left: 500%;
       /* margin-right: 20%; */
 
     }
@@ -348,7 +352,7 @@ footer {
 
     }
     .tur{
-      margin-left: 358%;
+      margin-left: 600%;
       /* margin-right: 20%; */
 
     }
@@ -372,6 +376,19 @@ footer {
      width: 0;
     }
     
+    .drapper .phone{
+      padding-top: 2%;
+      padding-right: 20%;
+      min-width: 10%;
+      /* height: 110px; */
+      /* line-height: 110px; */
+      text-align: center;
+      /* background-color: #ddd; */
+      margin-right: 2%;
+      /* border-radius: 50px; */
+      margin-bottom: 2%;
+    }
+
     .drapper .item{
       min-width: 10%;
       /* height: 110px; */
