@@ -18,6 +18,7 @@ app.get("/", (request, response)=>{
     response.render("index", {fan:day})})
 
   var qq=""
+  var bad =""
   var te= 1
   te.toString
 app.get("/home", (request, response)=>{
@@ -41,8 +42,9 @@ app.get("/home", (request, response)=>{
         var hj= res.data
         // console.log(hj)
         qq = hj
+        console.log(bad)
         // response.render("home", {fan:day, fact:hj})
-    response.render("home", {fan:day, fact:qq, team:te})
+    response.render("home", {fan:day, fact:qq, team:te, fun:bad})
 
     }).catch(function (error) {
         // console.error(error);
@@ -50,9 +52,26 @@ app.get("/home", (request, response)=>{
     });
     // console.log(qq)
     // response.render("home", {fan:day, fact:qq, team:te})
+    // const axios = require("axios");
+
+const option = {
+  method: 'GET',
+  url: 'https://coingecko.p.rapidapi.com/exchanges',
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+  }
+};
+
+axios.request(option).then(function (response) {
+	// console.log(response.data);
+  bad= response.data
+
+}).catch(function (error) {
+	console.error(error);
+});
   })
-  
-// app.get("/back", (request, response)=>{response.send("hello")}) 
+   
     
 
 app.post("/home", (request, response)=>{ 
@@ -62,9 +81,33 @@ app.post("/home", (request, response)=>{
   app.post("/back", (request, response)=>{ 
     te-=1
     response.redirect("/home")}) 
+
+
+var paith = ""
+    app.get("/discover-exchange", (request, response)=>{
+      const axios = require("axios");
+      var day=new Date().getFullYear()
+      const options = {
+        method: 'GET',
+        url: 'https://coingecko.p.rapidapi.com/exchanges/'+ paith,
+        headers: {
+          'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+          'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+        }
+      };
+      
+      axios.request(options).then(function (res) {
+        // console.log(response.data);
+        var tras= res.data
+        response.render("exchange", {fan:day, fas:tras})
+      }).catch(function (error) {
+        console.error(error);
+      });
+    })
+    
     
 var faith = ""
-app.get("/discover", (request, response)=>{
+app.get("/discover-crypto", (request, response)=>{
   const axios = require("axios");
   var day=new Date().getFullYear()
 const options = {
@@ -95,12 +138,20 @@ axios.request(options).then(function (res) {
 })
 
 app.post("/discover", (request, response)=>{ 
-  var af = request.body.current
-  faith = af
-  var op=_.lowerCase(faith)
-  console.log(op)
-  console.log(af)
-  response.redirect("/discover")})
+  var af = request.body.current.replaceAll(" ", "-")
+  var tim = ""
+  tim= af
+  faith=tim.toLowerCase()
+  // console.log(faith)
+  response.redirect("/discover-crypto")})
+
+  app.post("/exchange", (request, response)=>{ 
+    var af = request.body.current.replaceAll(" ", "-")
+    var tim = ""
+    tim= af
+    paith=tim.toLowerCase()
+    // console.log(faith)
+    response.redirect("/discover-exchange")})
 
 
 app.get("/signup", (request, response)=>{response.render("signup")})
@@ -135,6 +186,29 @@ axios.request(options).then(function (res) {
 });
   // df=request.params.hop
   // response.send(df+ "is a boy")
+})
+
+
+app.get("/home/exchange/:top", (request, response)=>{
+  const axios = require("axios");
+  var day=new Date().getFullYear()
+
+  const options = {
+    method: 'GET',
+    url: 'https://coingecko.p.rapidapi.com/exchanges/'+ request.params.top,
+    headers: {
+      'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+      'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+    }
+  };
+  
+  axios.request(options).then(function (res) {
+    // console.log(response.data);
+    var tras= res.data
+    response.render("exchange", {fan:day, fas:tras})
+  }).catch(function (error) {
+    console.error(error);
+  });
 })
 
 

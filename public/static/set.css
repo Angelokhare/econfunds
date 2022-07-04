@@ -235,12 +235,35 @@
     /* margin-left: 2%; */
   }
   .crap{
-    width: 11%;
+    width: 22%;
+    /* margin-top: 2%; */
+  }
+  .trap{
+    width: 40%;
     /* margin-top: 2%; */
   }
   /* .num{
     margin-left: -30%;
   } */
+
+
+
+  .ma{
+    text-align: center;
+    /* background-color: #9CB4CC; */
+    /* border: 1px solid black; */
+    margin-left: 20%;
+    font-weight: 600;
+    margin-right: 20%;
+    /* padding-top: 2%; */
+    /* padding-bottom: 1%; */
+    border-radius: 20px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1vw;
+  }
+
+
+
   .mj{
     text-align: center;
     background-color: #9CB4CC;
@@ -264,6 +287,13 @@
     /* border-radius: 20px; */
     font-family: 'Varela Round', sans-serif;
     font-size: 2vw;
+  }
+
+  .de{
+    display: inline-block;
+    padding: 1% 35px;
+    border-radius: 20px;
+ 
   }
 
   .we{
@@ -496,13 +526,33 @@ footer {
 
       /* margin-bottom: 10%; */
     }
+    .apper{
+      /* max-height: 200px; */
+      /* border: 0.5px solid #ddd; */
+      display: flex;
+      overflow-x: auto;
+      font-family: 'Varela Round', sans-serif;
+      margin-left: 5%;
+      margin-right:5%;
+
+      /* margin-bottom: 10%; */
+    }
     .drapper::-webkit-scrollbar{
      width: 0;
     }
     /* .farm{
       border: 1px solid #ddd;
     } */
-    
+    .sec{
+      min-width: 15%;
+      /* height: 110px; */
+      /* line-height: 110px; */
+      text-align: center;
+      /* background-color: #ddd; */
+      margin-right: 2%;
+      /* border-radius: 50px; */
+      margin-bottom: 2%;
+    }
   .phone{
       padding-top: 2%;
       padding-right: 20%;
@@ -536,6 +586,23 @@ footer {
     /* position: fixed;*/
   }
 }  
+@media only screen and (max-width:992px){
+  .woman{
+    display: none;
+  }
+  .de{
+    padding: 2% 30px;
+  }
+  .ma{
+    font-size: 1.5vw;
+  }
+  
+  .mj{
+    font-size: 3vw;
+  }
+  
+  }
+  
 @media only screen and (max-width:846px) {
     /* #view{visibility: visible;} */
     /* header {display: none;}
@@ -581,40 +648,15 @@ object-fit: cover;
   padding: 3% 31px;
 }
 .mj{
-  font-size: 4vw;
+  font-size: 3vw;
 }
 }
 .df{
   background-color: #5F7464;
 }
 
-@media only screen and (max-width:625px){
-  .facu{
-    margin-top: 10%;
-  }
-  .mj{
-    font-size: 4vw;
-  }
-  .wer{
-    padding-top: 2%;
-  }
-  .sap{
-    font-size: 3vw;
-    padding-top: 20%;
-  }
-  }
-@media only screen and (max-width:650px){
-  .mj{
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  
-  } 
-@media only screen and (max-width:695px){
-.we{
-  padding: 3% 28px;
-}
-}
+
+
 @media only screen and (max-width:858px){
   .we{
     padding: 3% 35px;
@@ -631,7 +673,39 @@ object-fit: cover;
       padding: 3% 28px;
     }
     }  
-
+@media only screen and (max-width:695px){
+      .we{
+        padding: 3% 28px;
+      }    
+      .sec{
+        min-width: 20%;
+        margin-right: 5%;
+      }
+    }
+@media only screen and (max-width:650px){
+      .mj{
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      
+      } 
+@media only screen and (max-width:625px){
+        .facu{
+          margin-top: 10%;
+        }
+        .mj{
+          font-size: 4vw;
+        }
+        .wer{
+          padding-top: 2%;
+        }
+        .sap{
+          font-size: 3vw;
+          padding-top: 20%;
+        }
+        }
+      
+    
 @media only screen and (max-width:500px){
 .welcoming {
 font-size: 550%;}
@@ -645,7 +719,13 @@ font-size: 550%;}
   padding-top: 4%;
 } */
 .crap{
-  width: 16%;
+  width: 30%;
+}
+.de{
+  padding: 4% 25px;
+}
+.ma{
+  font-size: 2vw;
 }
 .wp{
 font-size: 5vw;
@@ -654,18 +734,12 @@ font-size: 5vw;
 .zx{
   font-size: 4vw;
 }
+.sec{
+  min-width: 25%;
+  margin-right: 5%;
+}
 }
 
-@media only screen and (max-width:992px){
-.woman{
-  display: none;
-}
-
-.mj{
-  font-size: 3vw;
-}
-
-}
 
 
 /* @media only screen and (max-width:900px){
@@ -697,6 +771,10 @@ font-size: 5vw;
 .welcoming {
 font-size: 450%;
 padding-top: 15%;}
+.sec{
+  min-width: 28%;
+  margin-right: 5%;
+}
 }
 @media only screen and (min-height:2000px){
 /* #mydancing{
@@ -712,6 +790,15 @@ background-size: 210%;
 footer{
  position: fixed;
  bottom: 0%;
+}
+}
+
+@media only screen and (max-width:375px){
+.de{
+  padding: 5% 20px;
+}
+.ma{
+  font-size: 2.5vw;
 }
 
 }
@@ -731,6 +818,7 @@ footer{
 .we{
   padding: 3% 18px;
 }
+
 }
 /* @media only screen and (max-width:450px){
 #mydancing{

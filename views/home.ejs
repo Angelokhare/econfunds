@@ -112,12 +112,29 @@
 </div>
 
 <div class="qer hiz">
-  <form action="/discover" method="post">
+  <form action="/discover" method="post" class="hiz crp">
     <div class="form-group">
       <input class="inside" name="current" type="search" placeholder="Search Coin">
       <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
     </div>
   </form>
+  <form action="/exchange" method="post" class="hid rip">
+    <div class="form-group">
+      <input class="inside" name="current" type="search" placeholder="Search Exchange">
+      <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+    </div>
+  </form>
+  <div class="docking ma">
+    <ul>
+      <li class="de mak vain">
+        Market
+      </li>
+      <li class="de ex">
+        Exchange
+      </li>
+    </ul>
+  </div>
+  <div class="ttt hiz">
   <div class="rapper bbb">
     <div class="phone">
       S/N
@@ -143,7 +160,7 @@
   </div>
   <div class="item">
      <a class="line" style="color: #000;" href="/home/crypto/<%=fact[i].id %>"> <%= fact[i].name %> <br></a>
-     <span style="background-color: #DFDFDF;"> <a class="line" style="color: #000;" href="/home/crypto/<%=fact[i].id %>"><%= fact[i].symbol %></a> </span>
+     <span style="background-color: #DFDFDF;"> <a class="line" style="color: #000; text-transform: uppercase;" href="/home/crypto/<%=fact[i].id %>"><%= fact[i].symbol %></a> </span>
   </div>
   <div class="item">
       <span class="bor cur">$<%= fact[i].current_price %></span>
@@ -153,6 +170,12 @@
   </div>
   <div class="item">
     <span class="aq" style="margin-left: 800%;"><%= fact[i].price_change_percentage_24h %></span>
+</div>
+<div class="item">
+  <span class="stl" style="margin-left: 1000%;">$<%= fact[i].total_volume %></span>
+</div>
+<div class="item">
+  <span class="lit" style="margin-left: 1200%; text-transform: uppercase;"><%= fact[i].circulating_supply %><%= fact[i].symbol %></span>
 </div>
   <span class="hid fin"><%= fact[i].price_change_24h %></span>
   <span class="hid fit"><%= fact[i].market_cap_change_24h %></span>
@@ -178,7 +201,32 @@
     </li>
   </ul>
 </div>
+  </div>
   <!-- </div> -->
+  <div class="change hid">
+    <% for(let i=0; i<=99; i++){ %>
+      <div class="drapper">
+        <div class="sec">
+          <span class="num sam"><%= fun[i].trust_score_rank %></span>
+        </div>
+        <div class="sec">
+          <img class="trap" src=" <%= fun[i].image %>" alt="">
+        </div>
+        <div class="sec">
+          <a class="line" style="color: #000;" href="/home/exchange/<%=fun[i].id %>"> <%= fun[i].name %></a>
+        </div>
+        <div class="sec">
+          <span class=""><%= fun[i].country %></span>
+        </div>
+        <div class="sec">
+          <span  class=""><%= fun[i].year_established %></span>
+        </div>
+        <div class="sec">
+          <a class="line" href="<%= fun[i].url %>">Visit Website </a>
+        </div>
+      </div>
+      <% } %>
+  </div>
 </div>
 </div>
 
@@ -289,7 +337,7 @@ Dismiss
             it[i].classList.remove("das")
           }
         }
-      
+
 
         var he= document.querySelectorAll(".aq");
           for(var i = 0; i< he.length; i++){
@@ -312,6 +360,70 @@ Dismiss
           }
         }
         }
+
+
+        var hot= document.querySelectorAll(".stl");
+          for(var i = 0; i< hot.length; i++){
+          if(hot[i].innerHTML.length==13){
+            var sd =hot[i].innerHTML.slice(0, 4)
+            var td =hot[i].innerHTML.slice(4, 6)
+            hot[i].innerHTML=sd +"."+ td + "B" 
+          }
+          else if(hot[i].innerHTML.length==12){
+            var sd =hot[i].innerHTML.slice(0, 3)
+            var td =hot[i].innerHTML.slice(3, 5)
+            hot[i].innerHTML=sd +"."+ td + "B" 
+          }
+          else if(hot[i].innerHTML.length==11){
+            var sd =hot[i].innerHTML.slice(0, 2)
+            var td =hot[i].innerHTML.slice(2, 4)
+            hot[i].innerHTML=sd +"."+ td + "B" 
+          }
+          else if(hot[i].innerHTML.length==10){
+            var sd =hot[i].innerHTML.slice(0, 4)
+            var td =hot[i].innerHTML.slice(4, 6)
+            hot[i].innerHTML=sd +"."+ td + "M" 
+          }
+          else if(hot[i].innerHTML.length==9){
+            var sd =hot[i].innerHTML.slice(0, 3)
+            var td =hot[i].innerHTML.slice(3, 5)
+            hot[i].innerHTML=sd +"."+ td + "M"
+          }
+          else if(hot[i].innerHTML.length==8){
+            var sd =hot[i].innerHTML.slice(0, 2)
+            var td =hot[i].innerHTML.slice(2, 4)
+            hot[i].innerHTML=sd +"."+ td + "M"
+          }
+          else if(hot[i].innerHTML.length==7){
+            var sd =hot[i].innerHTML.slice(0, 4)
+            var td =hot[i].innerHTML.slice(4, 6)
+            hot[i].innerHTML=sd +"."+ td + "K"
+          }
+          else if(hot[i].innerHTML.length==6){
+            var sd =hot[i].innerHTML.slice(0, 3)
+            var td =hot[i].innerHTML.slice(3, 5)
+            hot[i].innerHTML=sd +"."+ td + "K"
+          }
+          else if(hot[i].innerHTML.length==5){
+            var sd =hot[i].innerHTML.slice(0, 2)
+            var td =hot[i].innerHTML.slice(2, 4)
+            hot[i].innerHTML=sd +"."+ td + "K"
+          }
+          else if(hot[i].innerHTML.length==14){
+            var sd =hot[i].innerHTML.slice(0, 2)
+            var td =hot[i].innerHTML.slice(2, 4)
+            hot[i].innerHTML=sd +"."+ td + "T"
+          }
+          // else if(hor[i].innerHTML.length==4){
+          //   var sd =hor[i].innerHTML.slice(0, 2)
+          //   hor[i].innerHTML=sd + "K"
+          // }
+          // else if(hor[i].innerHTML.length>=7){
+          //   var sd =hor[i].innerHTML.slice(0, 2)
+          //   hor[i].innerHTML=sd + "M"
+          // }
+        }
+
 
           var hor= document.querySelectorAll(".gij");
           for(var i = 0; i< hor.length; i++){
@@ -386,6 +498,40 @@ Dismiss
             hor[i].classList.remove("red")
           }
         }
+
+
+
+
+        var fe= document.querySelector(".ex") 
+       var fo= document.querySelector(".mak")
+    fo.addEventListener("click", function(){
+      fo.classList.add("vain")
+      document.querySelector(".ttt").classList.remove("hid")
+      document.querySelector(".ttt").classList.add("hiz")
+      document.querySelector(".change").classList.remove("hiz")
+      document.querySelector(".change").classList.add("hid")
+      document.querySelector(".crp").classList.remove("hid")
+      document.querySelector(".crp").classList.add("hiz")
+      document.querySelector(".rip").classList.remove("hiz")
+      document.querySelector(".rip").classList.add("hid")
+      // document.querySelector(".qer").classList.add("hiz")
+    fe.classList.remove("vain")
+  })
+  fe.addEventListener("click", function(){
+    document.querySelector(".ttt").classList.remove("hiz")
+    document.querySelector(".ttt").classList.add("hid")
+    document.querySelector(".change").classList.remove("hid")
+    document.querySelector(".change").classList.add("hiz")
+    document.querySelector(".crp").classList.remove("hiz")
+    document.querySelector(".crp").classList.add("hid")
+    document.querySelector(".rip").classList.remove("hid")
+    document.querySelector(".rip").classList.add("hiz")
+    // document.querySelector(".qer").classList.remove("hiz")
+    fe.classList.add("vain")
+    fo.classList.remove("vain")
+  })
+
+
 
 
         var hi= document.querySelector(".lap")
