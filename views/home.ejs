@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
   <body  class="coming">
     <!-- <video autoplay muted loop playsinline id="myVideo"><source src="static/tradshort.mp4" type="video/mp4"></video> -->
@@ -111,7 +112,13 @@
 </div>
 
 <div class="qer hiz">
-  <div class="rapper">
+  <form action="/discover" method="post">
+    <div class="form-group">
+      <input class="inside" name="current" type="search" placeholder="Search Coin">
+      <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
+    </div>
+  </form>
+  <div class="rapper bbb">
     <div class="phone">
       S/N
     </div>
@@ -135,8 +142,8 @@
     <img class="crap" src=" <%= fact[i].image %>" alt="">
   </div>
   <div class="item">
-     <a class="line" style="color: #000;" href="/home/<%=fact[i].id %>"> <%= fact[i].name %> <br></a>
-     <span style="background-color: #DFDFDF;"> <%= fact[i].symbol %> </span>
+     <a class="line" style="color: #000;" href="/home/crypto/<%=fact[i].id %>"> <%= fact[i].name %> <br></a>
+     <span style="background-color: #DFDFDF;"> <a class="line" style="color: #000;" href="/home/crypto/<%=fact[i].id %>"><%= fact[i].symbol %></a> </span>
   </div>
   <div class="item">
       <span class="bor cur">$<%= fact[i].current_price %></span>
@@ -467,6 +474,22 @@ Dismiss
   document.querySelector(".dupe").classList.add("tap");
   document.querySelector(".dp").classList.remove("vain");
   document.querySelector(".dp").classList.add("tap");
+
+  if(document.querySelector(".rapper").classList.contains("bbb")){
+  document.querySelector(".rapper").classList.remove("bbb")
+  document.querySelector(".rapper").classList.add("ppp")
+  }
+ var james=document.querySelectorAll(".drapper")
+  for(let i=0; i<james.length; i++){
+if(document.querySelectorAll(".drapper")[i].classList.contains("das")){
+  document.querySelectorAll(".drapper")[i].classList.remove("das")
+  document.querySelectorAll(".drapper")[i].classList.add("rat")
+}
+else if(document.querySelectorAll(".drapper")[i].classList.contains("bas")){
+  document.querySelectorAll(".drapper")[i].classList.remove("bas")
+  document.querySelectorAll(".drapper")[i].classList.add("bow")
+}
+  }
 if(document.querySelector(".dupe").classList.contains("deactivate")){
   document.querySelector(".dupe").classList.remove("deactivate")
   document.querySelector(".dupe").classList.add("df")
@@ -535,6 +558,21 @@ fr.addEventListener("click", function(){
   document.querySelector(".dupe").classList.add("vain");
   document.querySelector(".dp").classList.remove("tap");
   document.querySelector(".dp").classList.add("vain");
+  if(document.querySelector(".rapper").classList.contains("ppp")){
+  document.querySelector(".rapper").classList.remove("ppp")
+  document.querySelector(".rapper").classList.add("bbb")
+  }
+  var james=document.querySelectorAll(".drapper")
+  for(let i=0; i<james.length; i++){
+if(document.querySelectorAll(".drapper")[i].classList.contains("rat")){
+  document.querySelectorAll(".drapper")[i].classList.remove("rat")
+  document.querySelectorAll(".drapper")[i].classList.add("das")
+}
+else if(document.querySelectorAll(".drapper")[i].classList.contains("bow")){
+  document.querySelectorAll(".drapper")[i].classList.add("bas")
+  document.querySelectorAll(".drapper")[i].classList.remove("bow")
+}
+  }
   if(document.querySelector(".dupe").classList.contains("df")){
   document.querySelector(".dupe").classList.add("deactivate")
   document.querySelector(".dupe").classList.remove("df")

@@ -3,6 +3,7 @@ const body= require("body-parser");
 const ejs = require("ejs")
 const { request, response } = require("express");
 const http = require("https");
+const _ =require("lodash")
 // const { request, response } = require("express")
 
 
@@ -53,6 +54,7 @@ app.get("/home", (request, response)=>{
   
 // app.get("/back", (request, response)=>{response.send("hello")}) 
     
+
 app.post("/home", (request, response)=>{ 
   te+=1
   response.redirect("/home")})  
@@ -61,14 +63,52 @@ app.post("/home", (request, response)=>{
     te-=1
     response.redirect("/home")}) 
     
-    
+var faith = ""
+app.get("/discover", (request, response)=>{
+  const axios = require("axios");
+  var day=new Date().getFullYear()
+const options = {
+  method: 'GET',
+  url: 'https://coingecko.p.rapidapi.com/coins/'+ faith,
+  params: {
+    localization: 'true',
+    tickers: 'true',
+    market_data: 'true',
+    community_data: 'true',
+    developer_data: 'true',
+    sparkline: 'false'
+  },
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (res) {
+	// console.log(res.data);
+  gas= res.data
+  response.render("discover", {fan:day, fas:gas})
+}).catch(function (error) {
+	console.error(error);
+});
+
+})
+
+app.post("/discover", (request, response)=>{ 
+  var af = request.body.current
+  faith = af
+  var op=_.lowerCase(faith)
+  console.log(op)
+  console.log(af)
+  response.redirect("/discover")})
+
 
 app.get("/signup", (request, response)=>{response.render("signup")})
 app.get("/convert", (request, response)=>{response.render("convert")})
 
-app.get("/home/:hop", (request, response)=>{
+app.get("/home/crypto/:hop", (request, response)=>{
   const axios = require("axios");
-
+  var day=new Date().getFullYear()
 const options = {
   method: 'GET',
   url: 'https://coingecko.p.rapidapi.com/coins/'+ request.params.hop,
@@ -87,9 +127,9 @@ const options = {
 };
 
 axios.request(options).then(function (res) {
-	console.log(res.data);
+	// console.log(res.data);
   gas= res.data
-  response.render("search", {fas:gas})
+  response.render("search", {fan:day, fas:gas})
 }).catch(function (error) {
 	console.error(error);
 });
