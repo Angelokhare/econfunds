@@ -719,7 +719,7 @@ font-size: 550%;}
   padding-top: 4%;
 } */
 .crap{
-  width: 30%;
+  width: 40%;
 }
 .de{
   padding: 4% 25px;
@@ -799,6 +799,9 @@ footer{
 }
 .ma{
   font-size: 2.5vw;
+}
+.crap{
+  width: 50%;
 }
 
 }
