@@ -230,8 +230,8 @@
   }
   .re{
     display: inline-block;
-    padding: 3% 40px;
-    border-radius: 20px;
+    /* padding: 3% 40px;
+    border-radius: 20px; */
  
   }
   .sap{
@@ -302,15 +302,18 @@
   .tap{
     background-color: #5FD068;
   }
+
+.deactivate{
+  background-color: #9BA3EB;
+}  
 .decoration {text-decoration:none;
     color: #5FD068;}
-/* #rr{
-  padding-top: 2%;
-  border-radius: 25px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 2%;
-} */
+#rr{
+   border-radius: 50px;
+    /* border: 2px; */
+    /* font-size: 50px; */
+    padding: 1rem 2rem;
+}
 #ff {border-radius: 50px;
     /* border: 2px; */
     /* font-size: 50px; */
@@ -346,6 +349,20 @@ footer {
     background-color: #5F7161;
   /* background: #92B4EC; */
   }
+
+  .wp{
+    text-align: center;
+    /* background-color: #9CB4CC; */
+    /* margin-left: 20%; */
+    font-weight: 600;
+    /* margin-right: 20%; */
+    margin-top: 2%;
+    /* padding-bottom: 1%; */
+    /* border-radius: 20px; */
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2vw;
+  }
+
   .heading{
     margin-right: auto;
    /* font-family: 'Monoton', cursive; */
@@ -513,7 +530,9 @@ object-fit: cover;
   font-size: 4vw;
 }
 }
-
+.df{
+  background-color: #5F7464;
+}
 
 @media only screen and (max-width:625px){
   .facu{

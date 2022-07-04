@@ -153,16 +153,20 @@
 <% } %>
 <div class="docking bp">
   <ul>
-    <li class="re vain">
-      <
-    </li>
     <li class="re">
-      Page: <%= team %>
+      <form action="/back" method="post"> 
+        <!-- <a href="" type="submit"> ></a> -->
+        <button type="submit" id="ff" style="color: #fff;" class="wp dupe btn vain"> < </button>
+        <!-- <li class="pre"><button class="btn tap" id="ff" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li> -->
+       </form>
+    </li>
+    <li class="re" style=" padding: 3% 40px;">
+      <span class="zx">Page: <%= team %></span>
     </li>
     <li class="re">
       <form action="/home" method="post"> 
        <!-- <a href="" type="submit"> ></a> -->
-       <button type="submit" style="border: none;"> > </button>
+       <button type="submit" id="ff" style="color: #fff;" class="wp dp btn vain"> > </button>
       </form>
     </li>
   </ul>
@@ -235,6 +239,20 @@ Dismiss
             hd[i].classList.remove("tur")
           }
         }
+
+
+        var ap= document.querySelector(".zx");
+          var nextbutton= document.querySelector(".dupe");
+          if(ap.innerHTML=="Page: 1"){
+            nextbutton.classList.add("deactivate")
+            nextbutton.classList.remove("vain")
+            nextbutton.setAttribute("type", "button")
+          }
+         else{
+          nextbutton.classList.remove("deactivate")
+            nextbutton.classList.add("vain")
+         }
+
 
           var ta= document.querySelectorAll(".aq");
           var hoy= document.querySelectorAll(".fin");
@@ -445,6 +463,14 @@ Dismiss
   document.querySelectorAll(".vad")[0].classList.add("for-white")
   document.querySelectorAll("h1")[0].classList.remove("for-dark")
   document.querySelectorAll("h1")[0].classList.add("for-white")
+  document.querySelector(".dupe").classList.remove("vain");
+  document.querySelector(".dupe").classList.add("tap");
+  document.querySelector(".dp").classList.remove("vain");
+  document.querySelector(".dp").classList.add("tap");
+if(document.querySelector(".dupe").classList.contains("deactivate")){
+  document.querySelector(".dupe").classList.remove("deactivate")
+  document.querySelector(".dupe").classList.add("df")
+}
   var fr=document.querySelector(".aa");
   var ee=document.querySelector(".bb");
   var dd=document.querySelector(".cc");
@@ -505,6 +531,14 @@ fr.addEventListener("click", function(){
   document.querySelector(".mj").style.backgroundColor="#9CB4CC"
   document.querySelectorAll("h1")[0].classList.add("for-dark")
   document.querySelectorAll("h1")[0].classList.remove("for-white")
+  document.querySelector(".dupe").classList.remove("tap");
+  document.querySelector(".dupe").classList.add("vain");
+  document.querySelector(".dp").classList.remove("tap");
+  document.querySelector(".dp").classList.add("vain");
+  if(document.querySelector(".dupe").classList.contains("df")){
+  document.querySelector(".dupe").classList.add("deactivate")
+  document.querySelector(".dupe").classList.remove("df")
+}
       var fr= document.querySelector(".aa")
        var ee=document.querySelector(".bb")
         var dd=document.querySelector(".cc")
