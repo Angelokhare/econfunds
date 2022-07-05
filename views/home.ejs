@@ -87,6 +87,16 @@
           </div> -->
         </div>
         <h1 class="welcoming">Welcome to <br>The World <br> Of <br> <i class="corny"> Finance </i></h1>
+        <!-- <input list="brow">
+<datalist id="brow">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Cook">
+  <option value="Church">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>   -->
         <div class="vad for-dark">
           <div class="docking mj">
             <ul>
@@ -163,18 +173,23 @@
      <span style="background-color: #DFDFDF;"> <a class="line" style="color: #000; text-transform: uppercase;" href="/home/crypto/<%=fact[i].id %>"><%= fact[i].symbol %></a> </span>
   </div>
   <div class="item">
+      <i style="margin-left: 200%; background-color: #FCF1F1; color: #000;">Price</i><br>
       <span class="bor cur">$<%= fact[i].current_price %></span>
   </div>
   <div class="item">
+    <i style="margin-left: 500%; background-color: #FCF1F1; color: #000;">Market_Cap</i><br>
     <span class="vic gij">$<%= fact[i].market_cap %></span>
   </div>
   <div class="item">
+    <i style="margin-left: 800%; background-color: #FCF1F1; color: #000;">24h%</i><br>
     <span class="aq" style="margin-left: 800%;"><%= fact[i].price_change_percentage_24h %></span>
 </div>
 <div class="item">
+  <i style="margin-left: 1000%; background-color: #FCF1F1; color: #000;">Volume(24h)</i><br>
   <span class="stl" style="margin-left: 1000%;">$<%= fact[i].total_volume %></span>
 </div>
 <div class="item">
+  <i style="margin-left: 1200%; background-color: #FCF1F1; color: #000;">Circulating_Supply</i><br>
   <span class="lit" style="margin-left: 1200%; text-transform: uppercase;"><%= fact[i].circulating_supply %><%= fact[i].symbol %></span>
 </div>
   <span class="hid fin"><%= fact[i].price_change_24h %></span>
@@ -213,12 +228,15 @@
           <img class="trap" src=" <%= fun[i].image %>" alt="">
         </div>
         <div class="sec">
+      <i style="background-color: #FCF1F1; color: #000;">Name</i><br>
           <a class="line" style="color: #000;" href="/home/exchange/<%=fun[i].id %>"> <%= fun[i].name %></a>
         </div>
         <div class="sec">
+      <i style="background-color: #FCF1F1; color: #000;">Country</i><br>
           <span class=""><%= fun[i].country %></span>
         </div>
         <div class="sec">
+      <i style="background-color: #FCF1F1; color: #000;">Year</i><br>
           <span  class=""><%= fun[i].year_established %></span>
         </div>
         <div class="sec">
@@ -506,6 +524,7 @@ Dismiss
        var fo= document.querySelector(".mak")
     fo.addEventListener("click", function(){
       fo.classList.add("vain")
+      fo.classList.remove("tap")
       document.querySelector(".ttt").classList.remove("hid")
       document.querySelector(".ttt").classList.add("hiz")
       document.querySelector(".change").classList.remove("hiz")
@@ -516,6 +535,8 @@ Dismiss
       document.querySelector(".rip").classList.add("hid")
       // document.querySelector(".qer").classList.add("hiz")
     fe.classList.remove("vain")
+    fe.classList.remove("tap")
+
   })
   fe.addEventListener("click", function(){
     document.querySelector(".ttt").classList.remove("hiz")
@@ -528,6 +549,8 @@ Dismiss
     document.querySelector(".rip").classList.add("hiz")
     // document.querySelector(".qer").classList.remove("hiz")
     fe.classList.add("vain")
+    fe.classList.remove("tap")
+    fo.classList.remove("tap")
     fo.classList.remove("vain")
   })
 
@@ -621,6 +644,15 @@ Dismiss
   document.querySelector(".dp").classList.remove("vain");
   document.querySelector(".dp").classList.add("tap");
 
+  if(document.querySelector(".ex").classList.contains("vain")){
+  document.querySelector(".ex").classList.remove("vain")
+  document.querySelector(".ex").classList.add("tap")
+  }
+ else if(document.querySelector(".mak").classList.contains("vain")){
+  document.querySelector(".mak").classList.remove("vain")
+  document.querySelector(".mak").classList.add("tap")
+ }
+  
   if(document.querySelector(".rapper").classList.contains("bbb")){
   document.querySelector(".rapper").classList.remove("bbb")
   document.querySelector(".rapper").classList.add("ppp")
@@ -636,6 +668,23 @@ else if(document.querySelectorAll(".drapper")[i].classList.contains("bas")){
   document.querySelectorAll(".drapper")[i].classList.add("bow")
 }
   }
+
+var fe= document.querySelector(".ex") 
+       var fo= document.querySelector(".mak")
+    fo.addEventListener("click", function(){
+      fo.classList.add("tap")
+      fo.classList.remove("vain")
+    fe.classList.remove("vain")
+    fe.classList.remove("tap")
+
+  })
+  fe.addEventListener("click", function(){
+    fe.classList.add("tap")
+    fe.classList.remove("vain")
+    fo.classList.remove("tap")
+    fo.classList.remove("vain")
+  })
+
 if(document.querySelector(".dupe").classList.contains("deactivate")){
   document.querySelector(".dupe").classList.remove("deactivate")
   document.querySelector(".dupe").classList.add("df")
@@ -708,6 +757,34 @@ fr.addEventListener("click", function(){
   document.querySelector(".rapper").classList.remove("ppp")
   document.querySelector(".rapper").classList.add("bbb")
   }
+  if(document.querySelector(".ex").classList.contains("tap")){ 
+  document.querySelector(".ex").classList.remove("tap")
+  document.querySelector(".ex").classList.add("vain")
+  }
+ else if(document.querySelector(".mak").classList.contains("tap")){
+  document.querySelector(".mak").classList.remove("tap")
+  document.querySelector(".mak").classList.add("vain")
+ }
+
+
+ var fe= document.querySelector(".ex") 
+       var fo= document.querySelector(".mak")
+    fo.addEventListener("click", function(){
+      fo.classList.add("vain")
+      fo.classList.remove("tap")
+    fe.classList.remove("vain")
+    fe.classList.remove("tap")
+
+  })
+  fe.addEventListener("click", function(){
+    fe.classList.add("vain")
+    fe.classList.remove("tap")
+    fo.classList.remove("tap")
+    fo.classList.remove("vain")
+  })
+
+
+
   var james=document.querySelectorAll(".drapper")
   for(let i=0; i<james.length; i++){
 if(document.querySelectorAll(".drapper")[i].classList.contains("rat")){

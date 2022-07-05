@@ -143,15 +143,15 @@
   .inside{
     flex: 1 1 auto;
     font-weight: 400;
-    /* height: calc(1.5em + 1rem + 2px); */
+    height: calc(1.5em + 1rem + 2px);
     padding: .5rem 1rem;
     /* font-size: 1.25rem; */
-    /* line-height: 1.5; */
+    line-height: 1.5;
     color: #495057;
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: .3rem 0 0 .3rem;
-    /* outline: 0; */
+    outline: 0;
     width: 75%;
   }
 
@@ -235,7 +235,7 @@
     /* margin-left: 2%; */
   }
   .crap{
-    width: 22%;
+    width: 30%;
     /* margin-top: 2%; */
   }
   .trap{
@@ -259,7 +259,7 @@
     /* padding-bottom: 1%; */
     border-radius: 20px;
     font-family: 'Varela Round', sans-serif;
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
 
 
@@ -591,10 +591,10 @@ footer {
     display: none;
   }
   .de{
-    padding: 2% 30px;
+    padding: 2% 25px;
   }
   .ma{
-    font-size: 1.5vw;
+    font-size: 2.5vw;
   }
   
   .mj{
@@ -672,6 +672,9 @@ object-fit: cover;
     .we{
       padding: 3% 28px;
     }
+    .crap{
+      width: 35%;
+    }
     }  
 @media only screen and (max-width:695px){
       .we{
@@ -687,7 +690,9 @@ object-fit: cover;
         margin-left: 10%;
         margin-right: 10%;
       }
-      
+      .crap{
+        width: 40%;
+      }
       } 
 @media only screen and (max-width:625px){
         .facu{
@@ -719,13 +724,13 @@ font-size: 550%;}
   padding-top: 4%;
 } */
 .crap{
-  width: 40%;
+  width: 50%;
 }
 .de{
   padding: 4% 25px;
 }
 .ma{
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 .wp{
 font-size: 5vw;
@@ -798,7 +803,7 @@ footer{
   padding: 5% 20px;
 }
 .ma{
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 .crap{
   width: 50%;
@@ -837,10 +842,22 @@ footer{
   .we{
     padding: 3% 18px;
   }
+  .de{
+    padding: 5% 16px;
+  }
+  .ma{
+    font-size: 3.5vw;
+  }
 }
 @media only screen and (max-width:300px){
   .we{
     padding: 3% 16px;
+  }
+  .de{
+    padding: 5% 16px;
+  }
+  .ma{
+    font-size: 3vw;
   }
 }
 @media only screen and (max-width:285px){
