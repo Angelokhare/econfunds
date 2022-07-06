@@ -181,6 +181,7 @@ vertical-align: middle;
 }
 .kl{
   margin-left: 25px;
+ 
 }
 .corny{
   color: #9EB23B;
@@ -268,7 +269,7 @@ header {
 
 /* .scope {
   padding-left: 25%;
-  background: url("eye.png") no-repeat left;
+  background: url("eye.png") no-repeat right;
   background-size: 20px;
 } */
 .facu{
@@ -433,7 +434,10 @@ padding-bottom: 2%;}
       border-radius: 50px;
         border: 2px;
         padding: 0.5rem 1rem;}
-        #below-button {margin-bottom: 10%;}
+        
+        #below-button {margin-bottom: 10%;} 
+        
+       
 .all-in{
   margin-top: 20%;
   /* display: block; */

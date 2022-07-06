@@ -17,6 +17,9 @@ app.get("/", (request, response)=>{
     var day=new Date().getFullYear()
     response.render("index", {fan:day})})
 
+  var jak=""  
+  var fir= "bitcoin"
+  var dir= "tron"
   var qq=""
   var bad =""
   var te= 1
@@ -42,9 +45,9 @@ app.get("/home", (request, response)=>{
         var hj= res.data
         // console.log(hj)
         qq = hj
-        console.log(bad)
+        console.log(jak)
         // response.render("home", {fan:day, fact:hj})
-    response.render("home", {fan:day, fact:qq, team:te, fun:bad})
+    response.render("home", {fan:day, fact:qq, team:te, fun:bad, kot:jak})
 
     }).catch(function (error) {
         // console.error(error);
@@ -67,6 +70,75 @@ axios.request(option).then(function (response) {
 	// console.log(response.data);
   bad= response.data
 
+}).catch(function (error) {
+	console.error(error);
+});
+// lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+// const axios = require("axios");
+
+const tions = {
+  method: 'GET',
+  url: 'https://coingecko.p.rapidapi.com/coins/'+ fir,
+  params: {
+    localization: 'true',
+    tickers: 'true',
+    market_data: 'true',
+    community_data: 'true',
+    developer_data: 'true',
+    sparkline: 'false'
+  },
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+  }
+};
+
+axios.request(tions).then(function (response) {
+	// console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+
+// const axios = require("axios");
+// llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+const ptions = {
+  method: 'GET',
+  url: 'https://coingecko.p.rapidapi.com/coins/'+ dir,
+  params: {
+    localization: 'true',
+    tickers: 'true',
+    market_data: 'true',
+    community_data: 'true',
+    developer_data: 'true',
+    sparkline: 'false'
+  },
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+  }
+};
+
+axios.request(ptions).then(function (response) {
+	// console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+
+// const axios = require("axios");
+// jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+const coptions = {
+  method: 'GET',
+  url: 'https://coingecko.p.rapidapi.com/coins/markets',
+  params: {vs_currency: 'usd', page: '1', per_page: '250', order: 'market_cap_desc'},
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+  }
+};
+
+axios.request(coptions).then(function (response) {
+	// console.log(response.data);
+   jak=response.data
 }).catch(function (error) {
 	console.error(error);
 });
@@ -211,7 +283,9 @@ app.get("/home/exchange/:top", (request, response)=>{
   });
 })
 
+app.post("/cover", (request, response)=>{ 
 
+  response.redirect("/home")})
 app.get("/login", (request, response)=>{
     var name=request.body.username
     var pass=request.body.password
