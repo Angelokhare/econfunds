@@ -293,6 +293,9 @@
 .welcoming{
   display: none;
 }
+.fog{
+  visibility: hidden;
+}
 /* kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk */
   .edges{
     /* border-width: thin; */

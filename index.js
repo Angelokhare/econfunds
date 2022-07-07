@@ -29,7 +29,10 @@ app.get("/", (request, response)=>{
   var fc=""
   var sc=""
   var fn=""
-  var sn=""
+  var fm=""
+  var sm=""
+  var ffn=""
+  var ssn=""
 
 app.get("/home", (request, response)=>{
 
@@ -54,7 +57,8 @@ app.get("/home", (request, response)=>{
         qq = hj
         // console.log(mak)
         // response.render("home", {fan:day, fact:hj})
-    response.render("home", {fan:day, fact:qq, team:te, fun:bad, kot:jak})
+        var dh= ffn/ssn
+    response.render("home", {fan:day, fact:qq, team:te, fun:bad, kot:jak, fm:fm, sm:sm, dh:dh, fc:fc, sc:sc, fn:fn})
 
     }).catch(function (error) {
         // console.error(error);
@@ -160,7 +164,136 @@ const coptions = {
   }).catch(function (error) {
     console.error(error);
   });
+  // llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllloooooooooooooooooo
 
+  // const axios = require("axios");
+  if(mak.includes(fc)){
+    var tah=mak.indexOf(fc)
+     console.log(dak[tah])
+ 
+const potions = {
+  method: 'GET',
+  url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
+  params: {
+    localization: 'true',
+    tickers: 'true',
+    market_data: 'true',
+    community_data: 'true',
+    developer_data: 'true',
+    sparkline: 'false'
+  },
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+  }
+};
+
+axios.request(potions).then(function (response) {
+	fm= response.data.image["large"];
+	ffn=((response.data.market_data["current_price"]["usd"])*fn);
+
+}).catch(function (error) {
+	console.error(error);
+});
+  }
+  else if(mak.includes(fc)==false){
+    var af = fc.replaceAll(" ", "-")
+   //  console.log(af)
+ var tim = ""
+ tim= af.toLowerCase()
+ console.log(tim)
+   // if(dak.includes(tim)){
+     // console.log(tim)
+     const options = {
+       method: 'GET',
+       url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
+       params: {
+         localization: 'true',
+         tickers: 'true',
+         market_data: 'true',
+         community_data: 'true',
+         developer_data: 'true',
+         sparkline: 'false'
+       },
+       headers: {
+         'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+       }
+     };
+     
+     axios.request(options).then(function (res) {
+       // console.log(res.data);
+       gas= res.data
+       fm= response.data.image["large"];
+       ffn= (response.data.market_data["current_price"]["usd"])*fn;
+     }).catch(function (error) {
+       console.error(error);
+     });
+ }
+
+ if(mak.includes(sc)){
+  var tah=mak.indexOf(sc)
+   console.log(dak[tah])
+
+const potions = {
+method: 'GET',
+url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
+params: {
+  localization: 'true',
+  tickers: 'true',
+  market_data: 'true',
+  community_data: 'true',
+  developer_data: 'true',
+  sparkline: 'false'
+},
+headers: {
+  'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+  'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+}
+};
+
+axios.request(potions).then(function (response) {
+sm=response.data.image["large"];
+ssn=response.data.market_data["current_price"]["usd"];
+
+}).catch(function (error) {
+console.error(error);
+});
+}
+else if(mak.includes(sc)==false){
+  var af = fc.replaceAll(" ", "-")
+ //  console.log(af)
+var tim = ""
+tim= af.toLowerCase()
+console.log(tim)
+ // if(dak.includes(tim)){
+   // console.log(tim)
+   const options = {
+     method: 'GET',
+     url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
+     params: {
+       localization: 'true',
+       tickers: 'true',
+       market_data: 'true',
+       community_data: 'true',
+       developer_data: 'true',
+       sparkline: 'false'
+     },
+     headers: {
+       'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+       'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+     }
+   };
+   
+   axios.request(options).then(function (res) {
+     // console.log(res.data);
+     gas= res.data
+     console.log(response.data.image["large"]);
+     console.log(response.data.market_data["current_price"]["usd"]);
+   }).catch(function (error) {
+     console.error(error);
+   });
+}
   })
    
     
@@ -223,7 +356,7 @@ const options = {
 };
 
 axios.request(options).then(function (res) {
-	// console.log(res.data);
+	console.log(res.data);
   gas= res.data
   // if(mak.includes(ff)){
   //   console.log(mak.indexOf(ff))
@@ -354,11 +487,11 @@ app.post("/cover", (request, response)=>{
   var firstcoin= request.body.firstcoin.toLowerCase()
   var firstnumber= request.body.firstnumber.toLowerCase()
   var secondcoin= request.body.secondcoin.toLowerCase()
-  var secondnumber= request.body.secondnumber.toLowerCase()
+  // var secondnumber= request.body.secondnumber.toLowerCase()
   fc = firstcoin;
   sc= secondcoin;
   fn= firstnumber;
-  sn= secondnumber;
+  // sn= secondnumber;
   console.log(firstcoin)
 
   response.redirect("/home")})
