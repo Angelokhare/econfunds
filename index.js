@@ -17,13 +17,20 @@ app.get("/", (request, response)=>{
     var day=new Date().getFullYear()
     response.render("index", {fan:day})})
 
-  var jak=""  
+  var jak=""
+  var mak=[]  
+  var dak=[]
   var fir= "bitcoin"
   var dir= "tron"
   var qq=""
   var bad =""
   var te= 1
   te.toString
+  var fc=""
+  var sc=""
+  var fn=""
+  var sn=""
+
 app.get("/home", (request, response)=>{
 
 
@@ -45,7 +52,7 @@ app.get("/home", (request, response)=>{
         var hj= res.data
         // console.log(hj)
         qq = hj
-        console.log(jak)
+        // console.log(mak)
         // response.render("home", {fan:day, fact:hj})
     response.render("home", {fan:day, fact:qq, team:te, fun:bad, kot:jak})
 
@@ -127,21 +134,33 @@ axios.request(ptions).then(function (response) {
 // const axios = require("axios");
 // jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 const coptions = {
-  method: 'GET',
-  url: 'https://coingecko.p.rapidapi.com/coins/markets',
-  params: {vs_currency: 'usd', page: '1', per_page: '250', order: 'market_cap_desc'},
-  headers: {
-    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
-    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
-  }
-};
+    method: 'GET',
+    url: 'https://coingecko.p.rapidapi.com/coins/list',
+    headers: {
+      'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+      'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+    }
+  };
+  
+  axios.request(coptions).then(function (response) {
+    // console.log(response.data);
+    jak=response.data
+    for(let i=0; i<=12099; i++){
+    mak.push(response.data[i].name.toLowerCase())
+    }
+    for(let i=0; i<=12099; i++){
+      dak.push(response.data[i].id.toLowerCase())
+      }
+    if(mak.includes(ff)){
+     var gah=mak.indexOf(ff)
+      dak[gah]
+    }
+  
 
-axios.request(coptions).then(function (response) {
-	// console.log(response.data);
-   jak=response.data
-}).catch(function (error) {
-	console.error(error);
-});
+  }).catch(function (error) {
+    console.error(error);
+  });
+
   })
    
     
@@ -177,14 +196,18 @@ var paith = ""
       });
     })
     
-    
+var ff=""
 var faith = ""
 app.get("/discover-crypto", (request, response)=>{
   const axios = require("axios");
   var day=new Date().getFullYear()
+  if(mak.includes(ff)){
+   var tah=mak.indexOf(ff)
+    console.log(dak[tah])
+
 const options = {
   method: 'GET',
-  url: 'https://coingecko.p.rapidapi.com/coins/'+ faith,
+  url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
   params: {
     localization: 'true',
     tickers: 'true',
@@ -202,19 +225,27 @@ const options = {
 axios.request(options).then(function (res) {
 	// console.log(res.data);
   gas= res.data
+  // if(mak.includes(ff)){
+  //   console.log(mak.indexOf(ff))
+  // }
+  // console.log(ff)
+  // console.log(mak)
   response.render("discover", {fan:day, fas:gas})
 }).catch(function (error) {
 	console.error(error);
 });
-
+  }
 })
 
 app.post("/discover", (request, response)=>{ 
-  var af = request.body.current.replaceAll(" ", "-")
-  var tim = ""
-  tim= af
-  faith=tim.toLowerCase()
+  // var af = request.body.current.replaceAll(" ", "-")
+  // var tim = ""
+  // tim= af
+  // faith=tim.toLowerCase()
   // console.log(faith)
+  ff= request.body.current.toLowerCase()
+  // console.log(ff)
+  // kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
   response.redirect("/discover-crypto")})
 
   app.post("/exchange", (request, response)=>{ 
@@ -284,6 +315,15 @@ app.get("/home/exchange/:top", (request, response)=>{
 })
 
 app.post("/cover", (request, response)=>{ 
+  var firstcoin= request.body.firstcoin.toLowerCase()
+  var firstnumber= request.body.firstnumber.toLowerCase()
+  var secondcoin= request.body.secondcoin.toLowerCase()
+  var secondnumber= request.body.secondnumber.toLowerCase()
+  fc = firstcoin;
+  sc= secondcoin;
+  fn= firstnumber;
+  sn= secondnumber;
+  console.log(firstcoin)
 
   response.redirect("/home")})
 app.get("/login", (request, response)=>{
@@ -291,8 +331,7 @@ app.get("/login", (request, response)=>{
     var pass=request.body.password
     console.log(pass)
     var day=new Date().getFullYear()
-    response.render("login", {fan:day}
-    )
+    response.render("login", {fan:day})
    })
 app.post("/login",(request, response)=>{
     var name=request.body.username
