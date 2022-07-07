@@ -235,6 +235,42 @@ axios.request(options).then(function (res) {
 	console.error(error);
 });
   }
+   else if(mak.includes(ff)==false){
+     var af = ff.replaceAll(" ", "-")
+    //  console.log(af)
+  var tim = ""
+  tim= af.toLowerCase()
+  console.log(tim)
+    // if(dak.includes(tim)){
+      // console.log(tim)
+      const options = {
+        method: 'GET',
+        url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
+        params: {
+          localization: 'true',
+          tickers: 'true',
+          market_data: 'true',
+          community_data: 'true',
+          developer_data: 'true',
+          sparkline: 'false'
+        },
+        headers: {
+          'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+          'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+        }
+      };
+      
+      axios.request(options).then(function (res) {
+        // console.log(res.data);
+        gas= res.data
+        response.render("discover", {fan:day, fas:gas})
+      }).catch(function (error) {
+        console.error(error);
+      });
+
+
+    // }
+  }
 })
 
 app.post("/discover", (request, response)=>{ 
