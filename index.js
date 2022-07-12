@@ -28,7 +28,7 @@ app.get("/", (request, response)=>{
   te.toString
   var fc=""
   var sc=""
-  var fn=""
+  var fn=1
   var fm=""
   var sm=""
   var ffn=""
@@ -166,134 +166,134 @@ const coptions = {
   });
   // llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllloooooooooooooooooo
 
-  // const axios = require("axios");
-  if(mak.includes(fc)){
-    var tah=mak.indexOf(fc)
-     console.log(dak[tah])
+//   // const axios = require("axios");
+//   if(mak.includes(fc)){
+//     var tah=mak.indexOf(fc)
+//      console.log(dak[tah])
  
-const potions = {
-  method: 'GET',
-  url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
-  params: {
-    localization: 'true',
-    tickers: 'true',
-    market_data: 'true',
-    community_data: 'true',
-    developer_data: 'true',
-    sparkline: 'false'
-  },
-  headers: {
-    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
-    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
-  }
-};
+// const potions = {
+//   method: 'GET',
+//   url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
+//   params: {
+//     localization: 'true',
+//     tickers: 'true',
+//     market_data: 'true',
+//     community_data: 'true',
+//     developer_data: 'true',
+//     sparkline: 'false'
+//   },
+//   headers: {
+//     'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+//     'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+//   }
+// };
 
-axios.request(potions).then(function (response) {
-	fm= response.data.image["large"];
-	ffn=((response.data.market_data["current_price"]["usd"])*fn);
+// axios.request(potions).then(function (response) {
+// 	fm= response.data.image["large"];
+// 	ffn=((response.data.market_data["current_price"]["usd"])*fn);
 
-}).catch(function (error) {
-	console.error(error);
-});
-  }
-  else if(mak.includes(fc)==false){
-    var af = fc.replaceAll(" ", "-")
-   //  console.log(af)
- var tim = ""
- tim= af.toLowerCase()
- console.log(tim)
-   // if(dak.includes(tim)){
-     // console.log(tim)
-     const options = {
-       method: 'GET',
-       url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
-       params: {
-         localization: 'true',
-         tickers: 'true',
-         market_data: 'true',
-         community_data: 'true',
-         developer_data: 'true',
-         sparkline: 'false'
-       },
-       headers: {
-         'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
-         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
-       }
-     };
+// }).catch(function (error) {
+// 	console.error(error);
+// });
+//   }
+//   else if(mak.includes(fc)==false){
+//     var af = fc.replaceAll(" ", "-")
+//    //  console.log(af)
+//  var tim = ""
+//  tim= af.toLowerCase()
+//  console.log(tim)
+//    // if(dak.includes(tim)){
+//      // console.log(tim)
+//      const options = {
+//        method: 'GET',
+//        url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
+//        params: {
+//          localization: 'true',
+//          tickers: 'true',
+//          market_data: 'true',
+//          community_data: 'true',
+//          developer_data: 'true',
+//          sparkline: 'false'
+//        },
+//        headers: {
+//          'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+//          'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+//        }
+//      };
      
-     axios.request(options).then(function (res) {
-       // console.log(res.data);
-       gas= res.data
-       fm= response.data.image["large"];
-       ffn= (response.data.market_data["current_price"]["usd"])*fn;
-     }).catch(function (error) {
-       console.error(error);
-     });
- }
+//      axios.request(options).then(function (res) {
+//        // console.log(res.data);
+//        gas= res.data
+//        fm= response.data.image["large"];
+//        ffn= (response.data.market_data["current_price"]["usd"])*fn;
+//      }).catch(function (error) {
+//        console.error(error);
+//      });
+//  }
 
- if(mak.includes(sc)){
-  var tah=mak.indexOf(sc)
-   console.log(dak[tah])
+//  if(mak.includes(sc)){
+//   var tah=mak.indexOf(sc)
+//    console.log(dak[tah])
 
-const potions = {
-method: 'GET',
-url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
-params: {
-  localization: 'true',
-  tickers: 'true',
-  market_data: 'true',
-  community_data: 'true',
-  developer_data: 'true',
-  sparkline: 'false'
-},
-headers: {
-  'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
-  'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
-}
-};
+// const potions = {
+// method: 'GET',
+// url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
+// params: {
+//   localization: 'true',
+//   tickers: 'true',
+//   market_data: 'true',
+//   community_data: 'true',
+//   developer_data: 'true',
+//   sparkline: 'false'
+// },
+// headers: {
+//   'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+//   'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+// }
+// };
 
-axios.request(potions).then(function (response) {
-sm=response.data.image["large"];
-ssn=response.data.market_data["current_price"]["usd"];
+// axios.request(potions).then(function (response) {
+// sm=response.data.image["large"];
+// ssn=response.data.market_data["current_price"]["usd"];
 
-}).catch(function (error) {
-console.error(error);
-});
-}
-else if(mak.includes(sc)==false){
-  var af = fc.replaceAll(" ", "-")
- //  console.log(af)
-var tim = ""
-tim= af.toLowerCase()
-console.log(tim)
- // if(dak.includes(tim)){
-   // console.log(tim)
-   const options = {
-     method: 'GET',
-     url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
-     params: {
-       localization: 'true',
-       tickers: 'true',
-       market_data: 'true',
-       community_data: 'true',
-       developer_data: 'true',
-       sparkline: 'false'
-     },
-     headers: {
-       'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
-       'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
-     }
-   };
+// }).catch(function (error) {
+// console.error(error);
+// });
+// }
+// else if(mak.includes(sc)==false){
+//   var af = fc.replaceAll(" ", "-")
+//  //  console.log(af)
+// var tim = ""
+// tim= af.toLowerCase()
+// console.log(tim)
+//  // if(dak.includes(tim)){
+//    // console.log(tim)
+//    const options = {
+//      method: 'GET',
+//      url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
+//      params: {
+//        localization: 'true',
+//        tickers: 'true',
+//        market_data: 'true',
+//        community_data: 'true',
+//        developer_data: 'true',
+//        sparkline: 'false'
+//      },
+//      headers: {
+//        'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+//        'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+//      }
+//    };
    
-   axios.request(options).then(function (res) {
-     // console.log(res.data);
-     gas= res.data
-     console.log(response.data.image["large"]);
-     console.log(response.data.market_data["current_price"]["usd"]);
-   }).catch(function (error) {
-     console.error(error);
-   });
-}
+//    axios.request(options).then(function (res) {
+//      // console.log(res.data);
+//      gas= res.data
+//      console.log(response.data.image["large"]);
+//      console.log(response.data.market_data["current_price"]["usd"]);
+//    }).catch(function (error) {
+//      console.error(error);
+//    });
+// }
   })
    
     
@@ -493,6 +493,134 @@ app.post("/cover", (request, response)=>{
   fn= firstnumber;
   // sn= secondnumber;
   console.log(firstcoin)
+  const axios = require("axios");
+  if(mak.includes(fc)){
+    var tah=mak.indexOf(fc)
+     console.log(dak[tah])
+ 
+const potions = {
+  method: 'GET',
+  url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
+  params: {
+    localization: 'true',
+    tickers: 'true',
+    market_data: 'true',
+    community_data: 'true',
+    developer_data: 'true',
+    sparkline: 'false'
+  },
+  headers: {
+    'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+    'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+  }
+};
+
+axios.request(potions).then(function (response) {
+	fm= response.data.image["large"];
+	ffn=((response.data.market_data["current_price"]["usd"])*fn);
+
+}).catch(function (error) {
+	console.error(error);
+});
+  }
+  else if(mak.includes(fc)==false){
+    var af = fc.replaceAll(" ", "-")
+   //  console.log(af)
+ var tim = ""
+ tim= af.toLowerCase()
+ console.log(tim)
+   // if(dak.includes(tim)){
+     // console.log(tim)
+     const options = {
+       method: 'GET',
+       url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
+       params: {
+         localization: 'true',
+         tickers: 'true',
+         market_data: 'true',
+         community_data: 'true',
+         developer_data: 'true',
+         sparkline: 'false'
+       },
+       headers: {
+         'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+         'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+       }
+     };
+     
+     axios.request(options).then(function (res) {
+       // console.log(res.data);
+       gas= res.data
+       fm= response.data.image["large"];
+       ffn= (response.data.market_data["current_price"]["usd"])*fn;
+     }).catch(function (error) {
+       console.error(error);
+     });
+ }
+
+ if(mak.includes(sc)){
+  var tah=mak.indexOf(sc)
+   console.log(dak[tah])
+
+const potions = {
+method: 'GET',
+url: 'https://coingecko.p.rapidapi.com/coins/'+ dak[tah],
+params: {
+  localization: 'true',
+  tickers: 'true',
+  market_data: 'true',
+  community_data: 'true',
+  developer_data: 'true',
+  sparkline: 'false'
+},
+headers: {
+  'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+  'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+}
+};
+
+axios.request(potions).then(function (response) {
+sm=response.data.image["large"];
+ssn=response.data.market_data["current_price"]["usd"];
+
+}).catch(function (error) {
+console.error(error);
+});
+}
+else if(mak.includes(sc)==false){
+  var af = fc.replaceAll(" ", "-")
+ //  console.log(af)
+var tim = ""
+tim= af.toLowerCase()
+console.log(tim)
+ // if(dak.includes(tim)){
+   // console.log(tim)
+   const options = {
+     method: 'GET',
+     url: 'https://coingecko.p.rapidapi.com/coins/'+ tim,
+     params: {
+       localization: 'true',
+       tickers: 'true',
+       market_data: 'true',
+       community_data: 'true',
+       developer_data: 'true',
+       sparkline: 'false'
+     },
+     headers: {
+       'X-RapidAPI-Key': '3c87ec6a25msh46b7d04fc169e7dp1cc42djsnd64003f09b54',
+       'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+     }
+   };
+   
+   axios.request(options).then(function (res) {
+     // console.log(res.data);
+     gas= res.data
+     console.log(response.data.image["large"]);
+     console.log(response.data.market_data["current_price"]["usd"]);
+   }).catch(function (error) {
+     console.error(error);
+   });
+}
 
   response.redirect("/home")})
 app.get("/login", (request, response)=>{

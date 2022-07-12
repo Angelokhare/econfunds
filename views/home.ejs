@@ -92,8 +92,11 @@
         <div class="conversion">
           <form action="/cover" method="post" >
               <h1 class="hid proc" style="color: red; font-size: 1.5vw;">No Network</h1>
+              <input class="hid hol" type="text">
+              <input class="hid lol" type="number">
+              <img class="hid wr" style="width:9%; padding-left: 2%;" src="" alt="">
           <div style="background-color: #EEEEEE; border-radius: 50px; margin: 0% 10%; padding: 3% 0%;" class="bv">
-              <img class="rap ker" src="<%= fm %>" alt="">
+              <img class="wt" style="width:9%; padding-left: 2%;" src="<%= fm %>" alt="">
               <ul class="docking">
             <li class="cap">
               <input class="dope" name="firstcoin" style="border-left: none; border-top: none; border-right: none; background-color: #EEEEEE" size="8%" type="text" value="<%= fc %>" placeholder="enter coin" required>
@@ -104,10 +107,10 @@
           </ul>
      
           </div> <br>
-          <button type="button" class="btn btn-light hj" style=" width: 9%; border-radius: 50px; margin-left: 1%; margin-top: 1%; margin-bottom: 1%;"><i class="fa fa-exchange"></i></button><br>
+          <button type="button" class=" lok btn btn-light hj" style=" width: 9%; border-radius: 50px; margin-left: 1%; margin-top: 1%; margin-bottom: 1%;"><i class="fa fa-exchange"></i></button><br>
           <br>
           <div style="background-color: #EEEEEE; border-radius: 50px; margin: 0% 10%; padding: 3% 0%;" class="bv">
-            <img class="rap ker" src="<%= sm %>" alt="">
+            <img class="wy" style="width:9%; padding-left: 2%;" src="<%= sm %>" alt="">
             <!-- <h1 class="">No Network</h1> -->
             <ul class="docking">
           <li class="cap">
@@ -153,13 +156,13 @@
 <div class="qer hiz">
   <form action="/discover" method="post" class="hiz crp">
     <div class="form-group">
-      <input class="inside" name="current" type="search" placeholder="Search Coin">
+      <input class="inside" name="current" type="search" placeholder="Search Coin" required>
       <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
     </div>
   </form>
   <form action="/exchange" method="post" class="hid rip">
     <div class="form-group">
-      <input class="inside" name="current" type="search" placeholder="Search Exchange">
+      <input class="inside" name="current" type="search" placeholder="Search Exchange" required>
       <button type="submit" class="btn btn-info"><i class="fa fa-search"></i></button>
     </div>
   </form>
@@ -920,6 +923,20 @@ var ie= document.querySelector(".cope")
             io.addEventListener("click", ()=>{
               document.querySelector(".dof").innerHTML=document.querySelector(".cope").value + " "+ document.querySelector(".dope").value + " " + "=>" + " " + document.querySelector(".gope").value + " " + document.querySelector(".fope").value
             })
+  document.querySelector(".lok").addEventListener("click", ()=>{
+    // if(document.querySelector("dope").value==document.querySelector("fope").value){
+      document.querySelector(".hol").value=document.querySelector(".dope").value
+      document.querySelector(".dope").value=document.querySelector(".fope").value
+      document.querySelector(".fope").value=document.querySelector(".hol").value
+      document.querySelector(".lol").value=document.querySelector(".cope").value
+      document.querySelector(".cope").value=document.querySelector(".gope").value
+      document.querySelector(".gope").value=document.querySelector(".lol").value
+      document.querySelector(".wr").setAttribute("src", document.querySelector(".wt").getAttribute("src"))
+      document.querySelector(".wt").setAttribute("src", document.querySelector(".wy").getAttribute("src"))
+      document.querySelector(".wy").setAttribute("src", document.querySelector(".wr").getAttribute("src"))
+
+    // }
+  })          
          </script>
 
 </body>
