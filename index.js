@@ -26,11 +26,11 @@ app.get("/", (request, response)=>{
   var bad =""
   var te= 1
   te.toString
-  var fc=""
-  var sc=""
+  var fc="Bitcoin"
+  var sc="Tron"
   var fn=1
-  var fm=""
-  var sm=""
+  var fm="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+  var sm="https://assets.coingecko.com/coins/images/1094/large/tron-logo.png?1547035066"
   var ffn=""
   var ssn=""
 
@@ -471,12 +471,12 @@ axios.request(coptions).then(function (response) {
 }).catch(function (error) {
   console.error(error);
 });
-var sfc=""
-var ssc=""
-var sfn=""
-var sfm=""
+var sfc="Bitcoin"
+var ssc="Tron"
+var sfn="1"
+var sfm="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
 var ssfn=""
-var ssm=""
+var ssm="https://assets.coingecko.com/coins/images/1094/large/tron-logo.png?1547035066"
 var sssn=""
 // app.get("/convert", (request, response)=>{
 //   var day=new Date().getFullYear()
