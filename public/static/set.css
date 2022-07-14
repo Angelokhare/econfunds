@@ -23,7 +23,7 @@
 
  .cap{
   display: inline-block;
-  padding: 0% 18px;
+  /* padding: 0% 18px; */
   font-size: 2vw;
 
 }
@@ -208,6 +208,9 @@
   }
 #view{
     display: none;
+}
+.jl{
+  padding: 0% 10px;
 }
 .init{
     text-decoration:none;
@@ -874,6 +877,12 @@ object-fit: cover;
         .crap{
           width: 40%;
         }
+        .convers{
+          margin-left: 4%;
+          margin-right: 5%;
+          padding-left: 2%;
+          padding-right: 2%;
+        }
         .cap{
           font-size: 3vw;
         }
@@ -919,9 +928,9 @@ font-size: 550%;} */
 .we{
   padding: 3% 23px;
 }
-.cap{
+/* .cap{
   font-size: 4vw;
-}
+} */
 /* .mj{
   padding-top: 4%;
 } */
