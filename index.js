@@ -175,12 +175,14 @@ app.post("/return", (request, response)=>{
   response.redirect("/home")
 })    
 var ff=""
+var sq=""
 var faith = ""
 app.get("/discover-crypto", (request, response)=>{
   const axios = require("axios");
   var day=new Date().getFullYear()
-  if(mak.includes(ff)){
-   var tah=mak.indexOf(ff)
+  // console.log(ff+"hgff")
+  if(mak.includes(sq)){
+   var tah=mak.indexOf(sq)
     console.log(dak[tah])
 
 const options = {
@@ -224,7 +226,9 @@ app.post("/discover", (request, response)=>{
   // tim= af
   // faith=tim.toLowerCase()
   // console.log(faith)
+  // var rey= request.body.current
   ff= request.body.current.toLowerCase()
+  sq= ff.trim()
   // console.log(ff)
   // kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
   response.redirect("/discover-crypto")})
@@ -489,8 +493,8 @@ app.post("/dover", (request, response)=>{
   var firstnumber= request.body.firstnumber.toLowerCase()
   var secondcoin= request.body.secondcoin.toLowerCase()
   // var secondnumber= request.body.secondnumber.toLowerCase()
-  sfc = firstcoin;
-  ssc= secondcoin;
+  sfc = firstcoin.trim();
+  ssc= secondcoin.trim();
   sfn= firstnumber;
   // sn= secondnumber;
   console.log(firstcoin)
