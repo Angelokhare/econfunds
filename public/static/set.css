@@ -218,6 +218,9 @@
     font-family: 'Merienda', cursive;
   
   }
+  .rew{
+    font-size: 5vw;
+  }
   header {
     display: flex;
     justify-content: space-between;
@@ -264,6 +267,9 @@
   .vain{
     background-color: #112B3C;
     color: #fff;
+  }
+  #rr{
+font-size: 2vw;
   }
 .vet{
   background-color: #4D4C7D;
@@ -761,12 +767,15 @@ padding-top: 20%;
   margin-top: 20%;
   margin-bottom: 15%;
 }
+.rew{
+  font-size: 7vw;
+}
 #rr{
 padding-left: 40%;
 padding-right: 40%;
 padding-top: 5%;
 padding-bottom: 5%;
-font-size: 3vw;
+font-size: 4vw;
 }
 .please-enter {
 font-size: 3vw;}
@@ -825,6 +834,16 @@ object-fit: cover;
       margin-right: 10%;
     }
   }
+  @media only screen and (max-width:695px){
+    .we{
+      padding: 3% 28px;
+    }    
+    .sec{
+      min-width: 20%;
+      margin-right: 5%;
+    }
+  }
+
   @media only screen and (min-height:650px){
   .ret{
     position: fixed;
@@ -832,25 +851,16 @@ object-fit: cover;
     .ki{
       position: fixed;
       bottom: 0;}
+      .crap{
+        width: 40%;
+        font-size: 3vw;
       }
-@media only screen and (max-width:695px){
-      .we{
-        padding: 3% 28px;
-      }    
-      .sec{
-        min-width: 20%;
-        margin-right: 5%;
-      }
-    }
-@media only screen and (max-width:650px){
       .mj{
         margin-left: 10%;
         margin-right: 10%;
       }
-      .crap{
-        width: 40%;
       }
-      } 
+
 @media only screen and (max-width:625px){
         .facu{
           margin-top: 10%;
@@ -875,7 +885,11 @@ object-fit: cover;
           }
           .gol{width: 15%;}
           }   
-    
+@media only screen and (min-height:650px){
+            .bet{
+              position: fixed;
+              bottom: 0;}
+            }
 @media only screen and (max-width:500px){
 /* .welcoming {
 font-size: 550%;} */
