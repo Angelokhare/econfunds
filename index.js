@@ -482,6 +482,7 @@ var sfm="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?154703357
 var ssfn=""
 var ssm="https://assets.coingecko.com/coins/images/1094/large/tron-logo.png?1547035066"
 var sssn=""
+var noid=""
 // app.get("/convert", (request, response)=>{
 //   var day=new Date().getFullYear()
 //   var th= ssfn/sssn
@@ -587,6 +588,7 @@ headers: {
 axios.request(potions).then(function (response) {
 ssm=response.data.image["large"];
 sssn=response.data.market_data["current_price"]["usd"];
+noid=response.data.symbol;
 
 }).catch(function (error) {
 console.error(error);
@@ -634,7 +636,9 @@ console.log(tim)
     var day=new Date().getFullYear()
     var th= ssfn/sssn
     // console.log(th)
-    response.render("convert", {sfc:sfc, ssc:ssc, sfn:sfn, sfm:sfm, ssfn:ssfn, ssm:ssm, sssn:sssn, th:th, fan:day})}) 
+    var to= "to";
+    var is ="is";
+    response.render("convert", {sfc:sfc, ssc:ssc, sfn:sfn, sfm:sfm, ssfn:ssfn, ssm:ssm, sssn:sssn, th:th, fan:day, to:to, is:is, noid:noid})}) 
     app.get("*", (request, response)=>{
       var day=new Date().getFullYear()
       response.render("route", {fan:day})
