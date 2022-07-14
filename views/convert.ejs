@@ -195,39 +195,7 @@ var tt= aa+ bb+ cc+ dd+ ee+ ff+ gg
    }
    document.querySelector(".poi").addEventListener("click", ()=>{
     window.navigator.clipboard.writeText(tt)
-
-
-    const clipboardItem = new ClipboardItem({
-    'text/plain': someAsyncMethod().then((result) => {
-
-    /**
-     * We have to return an empty string to the clipboard if something bad happens, otherwise the
-     * return type for the ClipBoardItem is incorrect.
-     */
-    if (!result) {
-        return new Promise(async (resolve) => {
-            resolve(new Blob[``]())
-        })
-    }
-
-    const copyText = aa
-        return new Promise(async (resolve) => {
-            resolve(new Blob([copyText]))
-        })
-    }),
-})
-// Now, we can write to the clipboard in Safari
-navigator.clipboard.write([clipboardItem])
    })
-
-
-
-
-
-
-
-
-
 
    for(var i=0; i<2; i++){
           // var yod[1];
