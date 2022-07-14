@@ -631,6 +631,9 @@ console.log(tim)
     var th= ssfn/sssn
     // console.log(th)
     response.render("convert", {sfc:sfc, ssc:ssc, sfn:sfn, sfm:sfm, ssfn:ssfn, ssm:ssm, sssn:sssn, th:th, fan:day})}) 
-
+    app.get("*", (request, response)=>{
+      var day=new Date().getFullYear()
+      response.render("route", {fan:day})
+    })
 app.listen(process.env.PORT || 3000, ()=>{console.log("ready")})
 

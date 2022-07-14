@@ -23,8 +23,7 @@
 
  .cap{
   display: inline-block;
-  /* padding-top: 10%; */
-  padding: -1% 18px;
+  padding: 0% 18px;
   font-size: 2vw;
 
 }
@@ -220,6 +219,10 @@
   }
   .rew{
     font-size: 5vw;
+  }
+  .mew{
+    font-size: 11vw;
+    margin-bottom: 30%;
   }
   header {
     display: flex;
@@ -579,11 +582,18 @@ footer {
     padding-bottom: 2%;
   }
   .see{
-    width: 50%; 
+    width: 55%; 
     margin-left: auto;
      margin-right: auto; 
     display: block; 
     margin-top: 4%;
+  }
+  .kee{
+    width: 100%; 
+    margin-left: auto;
+     margin-right: auto; 
+    display: block; 
+    margin-bottom: 2%;
   }
 .das{
  /* background-color: #F0EBE3; */
@@ -851,16 +861,27 @@ object-fit: cover;
     .ki{
       position: fixed;
       bottom: 0;}
-      .crap{
-        width: 40%;
-        font-size: 3vw;
-      }
-      .mj{
-        margin-left: 10%;
-        margin-right: 10%;
-      }
-      }
 
+      .bet{
+        position: fixed;
+        bottom: 0;}
+      }
+      @media only screen and (max-width:650px){
+        .mj{
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+        .crap{
+          width: 40%;
+        }
+        .cap{
+          font-size: 3vw;
+        }
+        .see{
+          width: 90%; 
+          margin-top: 15%;
+        }
+      }
 @media only screen and (max-width:625px){
         .facu{
           margin-top: 10%;
@@ -884,12 +905,11 @@ object-fit: cover;
           padding-top: 35%;
           }
           .gol{width: 15%;}
+          .kee{
+            margin-top: 10%;
+          }
           }   
-@media only screen and (min-height:650px){
-            .bet{
-              position: fixed;
-              bottom: 0;}
-            }
+
 @media only screen and (max-width:500px){
 /* .welcoming {
 font-size: 550%;} */
@@ -898,6 +918,9 @@ font-size: 550%;} */
 }
 .we{
   padding: 3% 23px;
+}
+.cap{
+  font-size: 4vw;
 }
 /* .mj{
   padding-top: 4%;
@@ -914,7 +937,10 @@ font-size: 550%;} */
 .wp{
 font-size: 5vw;
 }
-
+.see{
+  width: 100%; 
+  margin-top: 20%;
+}
 .zx{
   font-size: 4vw;
 }
@@ -951,7 +977,6 @@ font-size: 5vw;
 }
 .gol{width: 20%;}
 .see{
-  width: 70%; 
   margin-top: 30%;
 }
 .down-below{
@@ -968,8 +993,18 @@ padding-top: 15%;} */
   min-width: 28%;
   margin-right: 5%;
 }
+.kee{
+  margin-top: 30%;
 }
-@media only screen and (min-height:2000px){
+}
+/* hhhhhhhiiiiieeeeeeggggghhhttttt */
+@media only screen and (min-height:500px)and (max-width:500px){
+.tet{
+  position:fixed;
+  bottom: 0;
+}
+}
+@media only screen and (min-height:2000px ) {
 
 footer{
  position: fixed;
