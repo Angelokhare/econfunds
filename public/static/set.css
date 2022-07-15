@@ -225,7 +225,7 @@
   }
   .mew{
     font-size: 11vw;
-    margin-bottom: 30%;
+    margin-bottom: 10%;
   }
   header {
     display: flex;
@@ -596,7 +596,7 @@ footer {
     margin-left: auto;
      margin-right: auto; 
     display: block; 
-    margin-bottom: 2%;
+    margin-bottom: 0;
   }
 .das{
  /* background-color: #F0EBE3; */
@@ -890,6 +890,9 @@ object-fit: cover;
           width: 90%; 
           margin-top: 15%;
         }
+        .mew{
+margin-bottom: 30%;
+        }
       }
 @media only screen and (max-width:625px){
         .facu{
@@ -1101,3 +1104,13 @@ footer{
 
  }
   } 
+
+  @media only screen and (max-width:255px){
+    .ve{
+     padding: 0px 12px;
+   
+    }
+    footer {
+      padding-top: 5%;
+    }
+  }

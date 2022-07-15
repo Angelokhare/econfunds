@@ -189,6 +189,12 @@
    document.querySelector("body").classList.remove("soft")
   document.querySelector("body").classList.add("hard")
   document.querySelector("header").classList.add("ss")
+  if(document.querySelector(".omg").getAttribute("src")== "static/menu.png"){
+    document.querySelector(".omg").setAttribute("src", "static/more.png")
+    }
+  else if(document.querySelector(".omg").getAttribute("src")== "static/cancel.png"){
+    document.querySelector(".omg").setAttribute("src", "static/close.png")}
+
   document.querySelectorAll("div")[2].classList.remove("je")
   document.querySelectorAll("div")[2].classList.add("ss")
   document.querySelector(".bw").classList.remove("vain")
@@ -204,6 +210,11 @@
    document.querySelector("header").classList.remove("ss")
    document.querySelector("body").classList.remove("hard")
   document.querySelector("body").classList.add("soft")
+  if(document.querySelector(".omg").getAttribute("src")== "static/more.png"){
+    document.querySelector(".omg").setAttribute("src", "static/menu.png")}
+
+  else if(document.querySelector(".omg").getAttribute("src")== "static/close.png"){
+    document.querySelector(".omg").setAttribute("src", "static/cancel.png")}
   document.querySelectorAll("div")[2].classList.remove("ss")
   document.querySelectorAll("div")[2].classList.add("je")
   document.querySelectorAll("h1")[1].classList.add("for-dark")
@@ -215,6 +226,7 @@
   document.querySelector(".bw").classList.remove("vet")
   document.querySelectorAll("h1")[0].classList.add("for-dark")
   document.querySelectorAll("h1")[0].classList.remove("for-white")
+
 
  }
 

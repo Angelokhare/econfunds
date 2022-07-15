@@ -33,6 +33,7 @@ app.get("/", (request, response)=>{
   var sm="https://assets.coingecko.com/coins/images/1094/large/tron-logo.png?1547035066"
   var ffn=""
   var ssn=""
+  var gas=""
 
 app.get("/home", (request, response)=>{
 
@@ -265,7 +266,7 @@ const options = {
 };
 
 axios.request(options).then(function (res) {
-	// console.log(res.data);
+	console.log(res.data);
   gas= res.data
   response.render("search", {fan:day, fas:gas})
 }).catch(function (error) {
