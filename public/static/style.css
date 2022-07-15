@@ -401,6 +401,10 @@ color: white;
 .toppin{
 display: none;
 }
+/* gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg */
+#thedancing{
+  display: none;
+}
   .user-login{
     text-align: center;
     /* position: relative; */
@@ -470,13 +474,13 @@ color: #5FD068;}
       }
     }      
 @media only screen and (max-width:810px) {
-    /* #mydancing{display: block;
+    #thedancing{display: block;
       position: fixed;
     width: 100%;
-    opacity: 60%;
-    z-index: -1;} */
+    opacity: 90%;
+    z-index: -1;}
     #mydancing{
-      background-image: url('build.jpg');
+      background-image: url('ddbuild.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100%;} 
