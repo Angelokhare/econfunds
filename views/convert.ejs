@@ -120,10 +120,10 @@
         <button type="submit" class="btn btn-success" style="border-radius: 50px; margin-left: 1%; margin-top: 1%; margin-bottom: 1%;">Generate</button>
           </form>
           <!-- <div style="margin-right:60%;" class="dof"></div> -->
-          <div style="background-color: #fff; margin-top: 5%;">
+          <!-- <div style="background-color: #fff; margin-top: 5%;">
           <span style="color: #000;"> <span style="text-transform: capitalize;" class="a">  <%=sfn%>  </span> <span style="text-transform: capitalize;" class="b">  <%=sfc%>  </span><span class="c">  <%=to%> </span> <span style="text-transform: uppercase;" class="d">  <%=ssc%>  </span> <span class="e"> <%=is%>  </span> <span class="yot f" style="text-transform: uppercase; color: green;"> <%=th%> </span><span class="g" style="text-transform: uppercase;"> <%=noid%> </span></span>
         </div>
-        <button type="button" class="btn btn-light hj gol poi" style=" border-radius: 50px; margin-left: 1%; margin-top: 1%; margin-bottom: 1%;"><i class="fa fa-copy"></i></button>  
+        <button type="button" class="btn btn-light hj gol poi" style=" border-radius: 50px; margin-left: 1%; margin-top: 1%; margin-bottom: 1%;"><i class="fa fa-copy"></i></button>   -->
         </div>
         </div>
         </div>
@@ -209,23 +209,35 @@ var tt= aa+ bb+ cc+ dd+ ee+ ff+ gg
   document.querySelector("header").classList.add("ss")
   document.querySelectorAll("div")[2].classList.remove("je")
   document.querySelectorAll("div")[2].classList.add("ss")
-  document.querySelector(".lw").classList.remove("vain")
-  document.querySelector(".lw").classList.add("vet")
   document.querySelector(".bw").classList.remove("vain")
   document.querySelector(".bw").classList.add("vet")
-  document.querySelector(".heading").classList.remove("for-dark")
+  document.querySelectorAll("h1")[1].classList.remove("for-dark")
   document.querySelectorAll("h1")[1].classList.add("for-white")
-  document.querySelectorAll(".vad")[0].classList.remove("for-dark")
-  document.querySelector(".mj").style.backgroundColor="#112B3C"
-  document.querySelectorAll(".vad")[0].classList.add("for-white")
   document.querySelectorAll("h1")[0].classList.remove("for-dark")
   document.querySelectorAll("h1")[0].classList.add("for-white")
-  document.querySelector(".dupe").classList.remove("vain");
-  document.querySelector(".dupe").classList.add("tap");
-  document.querySelector(".dp").classList.remove("vain");
-  document.querySelector(".dp").classList.add("tap");
+  document.querySelectorAll(".vad")[0].classList.add("for-white")
+ }
+ else{
+   yod.setAttribute("src", "static/moon.png")
+   document.querySelector("header").classList.remove("ss")
+   document.querySelector("body").classList.remove("hard")
+  document.querySelector("body").classList.add("soft")
+  document.querySelectorAll("div")[2].classList.remove("ss")
+  document.querySelectorAll("div")[2].classList.add("je")
+  document.querySelectorAll("h1")[1].classList.add("for-dark")
+  document.querySelectorAll("h1")[1].classList.remove("for-white")
+  document.querySelectorAll("h1")[0].classList.add("for-dark")
+  document.querySelectorAll("h1")[0].classList.remove("for-white")
+  document.querySelectorAll(".vad")[0].classList.add("for-dark")
+  document.querySelector(".bw").classList.add("vain")
+  document.querySelector(".bw").classList.remove("vet")
+  document.querySelectorAll("h1")[0].classList.add("for-dark")
+  document.querySelectorAll("h1")[0].classList.remove("for-white")
 
- }}})}
+ }
+
+}})}
+
 
 
 document.querySelector(".lok").addEventListener("click", ()=>{
