@@ -18,6 +18,73 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,0" />
 </head>
   <body>
+    <header class="">
+        <img class="icon-home" src="static/trade.png" alt="">
+      <h1 class="heading for-dark"> Econ<span class="secname">funds</span></h1>
+        <nav>
+          <ul class="docking">
+            
+            <li class="pre"><img class="sad" src="static/moon.png" alt=""></li>
+            <li class="pre"><a class="decoration tic"  >About</a></li>
+            <li class="pre"><a class="decoration tic"  href="">Features</a></li>
+            <!-- <li><a class="decoration tic"  href="">Blog</a></li> -->
+            <li class="pre"><a class="decoration tic"  href="">FAQ</a></li>
+            <li class="pre"><a class=" tic sr"  href="/Login">Login</a></li>
+            <li class="pre"><button class="btn tap" id="ff" type="submit"><a class="link-line" href="/Signup">Signup</a></button></li>
+            
+          </ul>
+        </nav>
+      </header>
+  
+  
+      <div id="view">
+      <div class="wrapper">
+          <div class="navbar je">
+            <div class=logo"">
+        <!-- <img class="second-home" src="static/trade.png" alt=""> -->
+              <h1 class="forming for-dark">Econ<span class="secname">funds</span></h1>
+            </div>
+            <div class="nav_right">
+             <ul>
+               <li class="nr_li">
+                 <i><img class="sad" src="static/moon.png" alt=""></i>
+               </li>
+               <li class="nr_li li_main">
+                 <img  class="omg" src="static/menu.png" alt="">
+         
+                 <div class="dd_menu">
+                   <div class="dd_left">
+                     <ul>
+                      <li><a href="/"><img class="icon" src="static/back.png" alt=""></a></li>
+                      <!-- <li><a href="/signup"><img class="icon" src="static/register.png" alt=""></a></li>
+                      <li><a href="/login"><img class="icon" src="static/key.png" alt=""></a></li>
+                      <li><a href="/convert"><img class="icon" src="static/exchange-rate.png" alt=""></a></li> -->
+  
+  
+                     </ul>
+         
+                   </div>
+                   <div class="dd_right">
+                     <ul>
+                      <li><a class="init" href="/"> Return</a></li>
+                       <!-- <li><a class="init" href="/signup"> Signup</a></li>
+                       <li><a class="init" href="/login"> Login</a></li>
+                       <li><a class="init" href="/convert"> Convert</a></li> -->
+                     </ul>
+         
+                   </div>
+                 </div>
+               </li>
+             </ul>
+            </div>
+          </div>
+           </div>
+          <!-- <hr> -->
+          <!-- <div class="facu lk">
+            <img class="sad" src="static/lamp.png" alt="">
+            
+            </div> -->
+          </div>
     <img class="kee" src="static/route.jpg" alt="">
     <h1 class="mew" style="font-family: 'Varela Round', sans-serif; text-align: center;padding-top: 5%; color: #A10035;">Wrong Page!</h1>
     <!-- <form action="/return" method="post"> -->
@@ -40,5 +107,87 @@
           </li>
       </ul>
        </footer>
+       <script>
+
+var li_main=document.querySelector(".li_main");
+    
+    li_main.addEventListener("click", function(){
+      this.classList.toggle("active");
+    })
+
+
+    var cod= document.querySelector(".omg");
+    cod.addEventListener("click", function(){
+     if(window.navigator.onLine==true){
+     if(cod.getAttribute("src")== "static/menu.png"){
+       cod.setAttribute("src", "static/cancel.png")}
+     else if(cod.getAttribute("src")== "static/more.png"){
+       cod.setAttribute("src", "static/close.png")}
+     else if(cod.getAttribute("src")== "static/close.png"){
+       cod.setAttribute("src", "static/more.png")}
+     else{
+       cod.setAttribute("src", "static/menu.png")}
+     }
+
+   })
+
+
+            for(var i=0; i<2; i++){
+          // var yod[1];
+  var yod= document.querySelectorAll(".sad")[i]
+  yod.addEventListener("click", function(){
+ if(window.navigator.onLine==true){
+ if(yod.getAttribute("src")== "static/moon.png"){
+   yod.setAttribute("src", "static/brightness.png")
+  document.querySelector("header").classList.add("ss")
+  document.querySelectorAll("h1")[1].classList.remove("for-dark")
+  document.querySelectorAll("h1")[1].classList.add("for-white")
+  document.querySelectorAll("h1")[0].classList.remove("for-dark")
+  document.querySelectorAll("h1")[0].classList.add("for-white")
+  if(document.querySelector(".omg").getAttribute("src")== "static/menu.png"){
+    document.querySelector(".omg").setAttribute("src", "static/more.png")
+    }
+  else if(document.querySelector(".omg").getAttribute("src")== "static/cancel.png"){
+    document.querySelector(".omg").setAttribute("src", "static/close.png")}
+
+  document.querySelectorAll("div")[2].classList.remove("je")
+  document.querySelectorAll("div")[2].classList.add("ss")
+  document.querySelector(".bw").classList.remove("vain")
+  document.querySelector(".bw").classList.add("vet")
+  document.querySelectorAll(".vad")[0].classList.add("for-white")
+ }
+// 
+else{
+   yod.setAttribute("src", "static/moon.png")
+   document.querySelector("header").classList.remove("ss")
+   document.querySelectorAll("h1")[1].classList.add("for-dark")
+  document.querySelectorAll("h1")[1].classList.remove("for-white")
+  document.querySelectorAll("h1")[0].classList.add("for-dark")
+  document.querySelectorAll("h1")[0].classList.remove("for-white")
+ 
+  if(document.querySelector(".omg").getAttribute("src")== "static/more.png"){
+    document.querySelector(".omg").setAttribute("src", "static/menu.png")}
+
+  else if(document.querySelector(".omg").getAttribute("src")== "static/close.png"){
+    document.querySelector(".omg").setAttribute("src", "static/cancel.png")}
+  document.querySelectorAll("div")[2].classList.remove("ss")
+  document.querySelectorAll("div")[2].classList.add("je")
+  document.querySelectorAll(".vad")[0].classList.add("for-dark")
+  document.querySelector(".bw").classList.add("vain")
+  document.querySelector(".bw").classList.remove("vet")
+  document.querySelectorAll("h1")[0].classList.add("for-dark")
+  document.querySelectorAll("h1")[0].classList.remove("for-white")
+
+
+ }
+
+}})}
+var hi= document.querySelector(".lap")
+            hi.addEventListener("click", ()=>{
+              document.querySelector(".bw").classList.remove("hij")
+              document.querySelector(".bw").classList.add("hid")
+            })
+
+       </script>
 </body>
 </html>
