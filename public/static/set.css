@@ -50,6 +50,9 @@
     /* background-color: #413F42; */
     background-color: #282A35;
   }
+  .sz{
+  background-color: #EAF6F6;
+  }
   .navbar{
     width: 100%;
     /* height: 10%; */
@@ -196,8 +199,15 @@
 
 
 
-
-
+.ey{
+  background-color: #CEE5D0;
+}
+.bred{
+  background-color: red;
+}
+.bgreen{
+  background-color: green;
+}
 
   .rat{
     background-color: #74959A;
@@ -280,6 +290,12 @@ font-size: 2vw;
 .vet{
   background-color: #4D4C7D;
 }
+.pap{
+  width: 10%;
+  /* margin-left: 5%; */
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
   .rap{
     width: 8%;
     /* margin-left: 2%; */
@@ -288,6 +304,9 @@ font-size: 2vw;
     width: 30%;
     /* margin-top: 2%; */
   }
+  /* .pap{
+
+  } */
   .trap{
     width: 40%;
     margin-top: 10%;
@@ -334,7 +353,10 @@ margin-right: 10%;
 padding-top: 8%;
 padding-bottom: 8%;
 }
-
+.rank{
+  margin-top: 5%;
+  margin-left: 5%;
+}
 .convers{
   text-align: center;
     background: rgba(0, 0, 0, 0.5);
@@ -453,6 +475,16 @@ padding-bottom: 8%;
   color: #fff;
   /* border-radius: 20px; */
 }
+.rw{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  /* border-radius: 20px; */
+}
+
 .wer{
   margin-right: auto;
   /* font-family: 'Monoton', cursive; */
@@ -729,6 +761,9 @@ footer {
     display: block;
     /* position: fixed;*/
   }
+  .rank{
+    margin-top: 10%;
+  }
   .kee{
     padding-top: 10%;
   }
@@ -859,6 +894,9 @@ object-fit: cover;
       min-width: 20%;
       margin-right: 5%;
     }
+    .pap{
+      width: 15%;
+    }
   }
 
   @media only screen and (min-height:650px){
@@ -880,6 +918,9 @@ object-fit: cover;
         }
         .crap{
           width: 40%;
+        }
+        .rank{
+          margin-top: 15%;
         }
         .convers{
           margin-left: 4%;
@@ -935,6 +976,9 @@ font-size: 550%;} */
 .we{
   padding: 3% 23px;
 }
+.rank{
+  margin-top: 20%;
+}
 /* .cap{
   font-size: 4vw;
 } */
@@ -963,6 +1007,9 @@ font-size: 5vw;
 .sec{
   min-width: 25%;
   margin-right: 5%;
+}
+.pap{
+  width: 20%;
 }
 }
 
