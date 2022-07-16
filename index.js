@@ -182,6 +182,7 @@ app.get("/discover-crypto", (request, response)=>{
   const axios = require("axios");
   var day=new Date().getFullYear()
   // console.log(ff+"hgff")
+ 
   if(mak.includes(sq)){
    var tah=mak.indexOf(sq)
     console.log(dak[tah])
@@ -230,6 +231,11 @@ app.post("/discover", (request, response)=>{
   // var rey= request.body.current
   ff= request.body.current.toLowerCase()
   sq= ff.trim()
+  if(sq=="storm x"){
+    sq="stormx"
+    console.log(sq)
+  }
+
   // console.log(ff)
   // kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
   response.redirect("/discover-crypto")})
