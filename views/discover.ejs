@@ -87,12 +87,13 @@
       <img class="pap" src="<%= fas.image["large"] %>" alt="">
       <ul class="">
     <li style="display: inline-block;">
-      <span class="qaz" style="font-weight: 700;">$<%= fas.market_data["current_price"]["usd"]%></span>
+      <span class="qaz" style="font-weight: 700; font-family: 'Varela Round', sans-serif;">$<%= fas.market_data["current_price"]["usd"]%></span>
     <button class="btn aq" style="border-radius:10px;padding: 0.5rem 1rem; font-family: 'Varela Round', sans-serif; font-weight: 600; color: #fff;" type="submit"><%= fas.market_data["price_change_percentage_24h"]%></a></button>
     </li>
     </ul>
     </div>
-    <span style="background-color: #DFDFDF; margin-left: 5%;"><%= fas.name %><i class="line" style="color: #000; text-transform: uppercase;"> <%= fas.symbol %> </i></span>
+    <h1 style="font-weight: 600; font-family: 'Varela Round', sans-serif; margin-left: 5%;"><%= fas.name %></h1>
+    <span style="background-color: #DFDFDF; margin-left: 5%;"><i class="line" style="color: #000; text-transform: uppercase;"> <%= fas.symbol %> </i></span>
     <!-- <h1>coming soon</h1> -->
 
    <span class="hid gf"><%= fas.market_data["price_change_percentage_24h"]%>
@@ -181,10 +182,14 @@
           if(hoq.innerHTML[0]=="-"){
             hob.classList.add("bred")
             hob.classList.remove("bgreen")
+            var ty= hob.innerHTML;
+            hob.innerHTML="-"+ty
           }
           else if(hoq.innerHTML[0]!="-"){
             hob.classList.add("bgreen")
             hob.classList.remove("bred")
+            var ty= hob.innerHTML;
+            hob.innerHTML="+"+ty
           }
         var hob= document.querySelector(".qaz");
           if(hob.innerHTML.length>=8){
@@ -204,7 +209,7 @@
  if(yod.getAttribute("src")== "static/moon.png"){
    yod.setAttribute("src", "static/brightness.png")
   //  document.querySelector("body").classList.remove("soft")
-  // document.querySelector("body").classList.add("hard")
+  document.querySelector("body").classList.add("ras")
   document.querySelector("header").classList.add("ss")
   document.querySelector("header").classList.remove("sz")
   document.querySelector(".ht").classList.add("vain")
@@ -231,7 +236,7 @@
   document.querySelector("header").classList.add("sz")
   document.querySelector(".ht").classList.add("ey")
   document.querySelector(".ht").classList.remove("vain")
-  //  document.querySelector("body").classList.remove("hard")
+   document.querySelector("body").classList.remove("ras")
   // document.querySelector("body").classList.add("soft")
   if(document.querySelector(".omg").getAttribute("src")== "static/more.png"){
     document.querySelector(".omg").setAttribute("src", "static/menu.png")}
