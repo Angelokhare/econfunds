@@ -171,10 +171,10 @@
 
 
   .form-group {
-    display: -webkit-flex;
-    -webkit-flex-wrap: wrap;
+    /* display: -webkit-flex; */
+    /* -webkit-flex-wrap: wrap; */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-bottom: 1rem;
     margin-right: 20%;
     margin-left: 20%;
@@ -773,8 +773,11 @@ footer {
   .hoj{
     display: none;
   }
-  .welcoming{
+  /* .welcoming{
     display: block;
+  } */
+  .vad{
+    padding-top: 10%;
   }
   .kot{
 padding-top: 20%;
@@ -876,6 +879,9 @@ object-fit: cover;
   }
   @media only screen and (max-width:800px){
   .gol{width: 12%;}
+  .vad{
+    padding-top: 15%;
+  }
 }
 @media only screen and (max-width:767px){
     .we{
@@ -899,6 +905,9 @@ object-fit: cover;
     }
     .pap{
       width: 15%;
+    }
+    .vad{
+      padding-top: 20%;
     }
   }
 
@@ -1014,6 +1023,9 @@ font-size: 5vw;
 .pap{
   width: 20%;
 }
+.vad{
+  padding-top: 30%;
+}
 }
 
 
@@ -1061,6 +1073,9 @@ padding-top: 15%;} */
 }
 .kee{
   padding-top: 30%;
+}
+.vad{
+  padding-top: 40%;
 }
 }
 /* hhhhhhhiiiiieeeeeeggggghhhttttt */
